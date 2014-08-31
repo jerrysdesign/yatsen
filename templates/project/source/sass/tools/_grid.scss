@@ -24,17 +24,4 @@ $container-style: static;
 
 // More info here: http://susydocs.oddbird.net/en/latest/settings/
 
-$page-container: ".container";
-
-#{$page-container} {
-  @include container(17);
-  @include susy-grid-background;
-}
-
-.container { @extend .container;}
-.header { @extend .container;}
-.main-nav { @extend .container;}
-.main { @extend .container;}
-.footer { @extend .container;}
-.area { @include span-columns(13, 17);}
-.side--right {@include span-columns(4 omega, 17);}
+// >> TO layout seeting
