@@ -170,8 +170,3 @@
 .clearfix, %pie-clearfix {
 	@include pie-clearfix;
 }
-
-%container {
-	@include container;
-}
-

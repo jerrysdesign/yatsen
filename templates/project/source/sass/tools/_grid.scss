@@ -14,12 +14,27 @@
 
 @import "susy";
 
-$total-columns  : 12;
-$column-width   : 4em;
-$gutter-width   : 1.25em;
+$total-columns  : 17;
+$column-width   : 40px;
+$gutter-width   : 20px;
 $grid-padding   : 0;
 $container-style: static;
 // border-box-sizing()
 @include border-box-sizing;
 
 // More info here: http://susydocs.oddbird.net/en/latest/settings/
+
+$page-container: ".container";
+
+#{$page-container} {
+  @include container(17);
+  @include susy-grid-background;
+}
+
+.container { @extend .container;}
+.header { @extend .container;}
+.main-nav { @extend .container;}
+.main { @extend .container;}
+.footer { @extend .container;}
+.area { @include span-columns(13, 17);}
+.side--right {@include span-columns(4 omega, 17);}
