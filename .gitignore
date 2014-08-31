@@ -1,0 +1,9 @@
+.DS_Store
+
+smacss-sass.sublime-workspace
+smacss-sass.sublime-project
+.scssc
+.sass-cache
+templates/project/source/css/
+templates/project/source/.coffeescript-cache/**/*
+templates/project/source/fire_app_log.txt
