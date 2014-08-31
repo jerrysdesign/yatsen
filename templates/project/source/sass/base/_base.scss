@@ -1,0 +1,159 @@
+// Compass Settings
+// ========================
+
+@import "compass/typography";
+
+$base-font-size:	$baseFontSize;
+$base-line-height:	$baseLineHeight;
+@include establish-baseline();
+$round-to-nearest-half-line: true;
+// $rhythm-unit:		em;
+
+
+
+/* ===========================
+   Global Defaults
+   =========================== */
+
+
+// Vanilla CSS
+// http://www.vanillacss.com/
+// ========================
+
+// BODY ELEMENTS
+// -------------------------
+body {
+	@include adjust-font-size-to(12px);
+	font-family:	$baseFontFamily;
+	font-weight:	$baseFontWeight;
+	color:			$baseFontColor;
+	background:		$baseBackground;
+
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+div {}
+hr {}
+img { max-width: 100%;}
+a {
+	color: $action;
+	text-decoration: none;
+	@include transition();
+	@include link-active-styles {
+		text-decoration: none;
+		color: $actionRespond;
+	}
+}
+
+// HEADINGS
+// -------------------------
+
+/* All Headings */
+// h1, h2, h3, h4, h5, h6 {}
+#{headings()} {
+	@include reset-box-model;
+}
+
+/* Individual Headings */
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
+
+
+// PARAGRAPHS
+// -------------------------
+
+/* First Paragraph */
+p {}
+
+/* Seccond Paragraph */
+abbr {}
+b {}
+
+/* Blockquote */
+blockquote {}
+cite {}
+
+/* Third Paragraph */
+dfn {}
+del {}
+em {}
+i {}
+strong {}
+ins {}
+small {}
+
+/* Quote */
+q { @include reset-box-model; }
+
+/* Fourth Paragraph */
+sub {}
+sup {}
+
+// LISTS
+// -------------------------
+
+/* All Lists */
+dl, ol, ul {}
+
+/* Definition Lists */
+dl {}
+dt {}
+dd {}
+
+/* Ordered Lists */
+ol {}
+ol li {}
+
+/* Unordered Lists */
+ul {}
+ul li {}
+
+// FORMS
+// -------------------------
+
+form {}
+fieldset {}
+legend {}
+label {}
+
+/* Inputs */
+input {}
+textarea {}
+
+/* Other */
+select {}
+optgroup {}
+
+// TABLES
+// -------------------------
+
+table {}
+caption {}
+tr {}
+
+/* Head */
+thead {}
+th {}
+
+/* Body */
+tbody {}
+td {}
+
+/* Foot */
+tfoot {}
+
+// OTHER
+// -------------------------
+
+address {}
+code {}
+samp {}
+pre {}
+
+kbd {}
+var {}
