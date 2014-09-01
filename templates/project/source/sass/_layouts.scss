@@ -1,5 +1,5 @@
 // ======================
-// Layouts
+// Layouts styles
 // ======================
 
 $page-container: ".container";
@@ -9,7 +9,7 @@ $page-container: ".container";
   @include susy-grid-background;
 }
 
-/* ======================= Layout ======================= */
+/* ======================= Layout styles ======================= */
 
 .container { @extend .container;}
 .header { @extend .container;}
@@ -19,8 +19,9 @@ $page-container: ".container";
 .area { @include span-columns(13, 17);}
 .side--right {@include span-columns(4 omega, 17);}
 
+@import "layout/home";
 @import "layout/header";
 @import "layout/nav";
 @import "layout/footer";
 @import "layout/main";
-@import "layout/home";
+	

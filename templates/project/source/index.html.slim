@@ -17,14 +17,37 @@ html.no-js
 		/![if lt IE 7]
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		
-		.container 
-			p =zh_lorem_paragraphs 50 
+		.container.bg
 			.header
+				.top-nav
+					ul
+			        	li: a href="javascript:;" 一般民眾版
+			        	li.active: a href="javascript:;" 學術研究版
+			        	li: a href="javascript:;" 回首頁
 			.main-nav
+				ul
+					li: a href="javascript:;" 網站簡介
+					li: a href="javascript:;" 資料庫查詢
+					li: a href="javascript:;" 電子書瀏覽
+					li: a href="javascript:;" 互動地圖
+					li: a href="javascript:;" 年代大世紀
+					li: a href="javascript:;" 主題館
+					li: a href="javascript:;" 熱門排行
+					li: a href="javascript:;" 相關連結
+					li: a href="javascript:;" 個人化服務
 			.main
 				.area
+					p =zh_lorem_paragraphs 5 
 				.side
 			.footer
+				.logo
+				.copyright
+					| 國立國父紀念館地址:11073臺北市信義區仁愛路4段505號 電話:(02)2758-8008
+					br
+					| 國立國父紀念館 版權所有 All Rights Reserved. 本館E-mail: 
+					a href="mailto:sun@yatsen.gov.tw" sun@yatsen.gov.tw
+					br
+					| 本站最佳瀏覽建議使用IE8以上版本以及1024*768解析度
 
 		script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" 
 		| <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>

@@ -3,4 +3,22 @@
    ======================= */
 
 .footer {
+	background: url('#{$imagesPath}/bg-foot.png');
+	height: 140px;
+	@include adjust-font-size-to(13px); 
+	padding-top: 40px;
+	.logo {
+		@include span-columns(2, 17);
+		@include push(3.5);
+		@include size(90px 56px);
+		@include image-2x('#{$imagesPath}/sys-logo.png', 90px, 56px);
+		margin-top: 10px;
+	}
+}
+.copyright {
+	@include span-columns(10, 17);
+}
+.logo {
+	background: url('#{$imagesPath}/sys-logo.png');
+	@extend .ir;
 }

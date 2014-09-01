@@ -7,27 +7,26 @@
 // Html 5 Element
 $audio-canvas-video: false; // True | False
 
+// Path
+// ----------------------
+$imagesPath	: "../img";
 
 // Base
 // ----------------------
 
 // Grid debug
-$grid-background-column-color: rgba($red,.2);
+$grid-background-column-color: rgba($red,.025);
 
 // Type
 $baseFontFamily	: $fontTC;
 // 以下千萬不要動
+// 這是拿來設compass跟susy
 $baseFontSize	: 16px;
 $baseLineHeight	: 24px;
 // 以上千萬不要動
 $baseFontWeight	: 300;
 $baseFontColor	: $black-90;
-$baseBackground	: $white;
-
-// Util
-// outputting ems, e.g. 14/@em
-$em				: $baseFontSize;
-$baseLine		: $baseFontSize * $baseLineHeight;
+$baseBackground	: url('#{$imagesPath}/bg0.png');
 
 
 // Font Family
@@ -39,10 +38,6 @@ $headingsFontFamily		: $baseFontFamily;
 $inputFontFamily		: $baseFontFamily;
 $buttonFontFamily		: $baseFontFamily;
 $codeFontFamily			: $monospace;
-
-// Path
-// ----------------------
-$imagesPath	: "../images";
 
 
 // ------------------------------------------------------------
@@ -57,6 +52,7 @@ $headingsColor			: $black-85;
 $linkColor				: $colorLochmara;
 $linkColorHover			: $colorMandy;
 
+$colorLinkHover			: $linkColorHover;
 $action					: $linkColor;
 $actionRespond			: $linkColorHover;
 
@@ -87,6 +83,11 @@ $bg-btn: #555;
 $bg-btn-hover: darken($bg-btn, 10%);
 $clr-btn: #212121;
 $clr-btn-hover: darken($clr-btn, 10%);
+
+// Breadcrumbs
+$colorBreadcrumbs: $black;
+// Pagination
+$colorPagination: $black;
 
 // = Grid
 // -----------------------------

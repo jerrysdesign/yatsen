@@ -7,17 +7,17 @@
 // Base styles
 @import "base";
 
-// helpers styles
-@import "tools/helpers";
-
 // Fonts
 // @import "fonts/...";
 
-// Layout styles
-@import "layouts";
+// helpers styles
+@import "tools/helpers";
 
 // Module Styles
-// @import "modules";
+@import "modules";
+
+// Layout styles
+@import "layouts";
 	
 // JS-based classes
 @import "states";

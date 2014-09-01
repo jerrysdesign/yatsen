@@ -4,3 +4,27 @@
 
 .home {
 }
+%double-bg {
+	&:before, &:after {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+// 無敵雙背景
+body {
+	@extend %double-bg;
+	&:before {
+		content: '';
+		background: url('#{$imagesPath}/bg1.png') no-repeat center top;
+	}
+	border-bottom: 6px solid #5f751e;
+}
+.bg {
+	@extend .container;
+	min-height: 410px;
+	background: url('#{$imagesPath}/bg1.png') no-repeat center top;
+}

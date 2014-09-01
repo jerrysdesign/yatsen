@@ -22,8 +22,9 @@ $round-to-nearest-half-line: true;
 
 // BODY ELEMENTS
 // -------------------------
+
 body {
-	@include adjust-font-size-to(12px);
+	//@include adjust-font-size-to(13px);
 	font-family:	$baseFontFamily;
 	font-weight:	$baseFontWeight;
 	color:			$baseFontColor;
