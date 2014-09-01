@@ -40,7 +40,45 @@ html.no-js
 				.area
 					.block-a
 					.block-b
+						h2.block__title【分類瀏覽】
+						ul
+							li: a href="javascript:;"
+							li: a href="javascript:;"
+							li: a href="javascript:;"
+							li: a href="javascript:;"
+							li: a href="javascript:;"
+							li: a href="javascript:;"
 					.block-c
+						.block-c__1
+							h2.block__title 【互動地圖】
+							div
+								| 跟著國父的足跡走遍天下
+								= image_tag(lorem_image("220x200"))
+
+						.block-c__2
+							h2.block__title 【歷史上的今天】
+							dl
+								-4.times do
+									dt =lorem_date("%Y/%m/%d", 2010..2025)
+									dd =zh_lorem_sentence 
+						.block-c__3
+							ul
+								li 熱門點閱
+								li 熱門收藏
+								li 熱門推薦
+							ul
+								li 名次
+								li 題名
+								li 次數
+							ol
+								-8.times do
+									/ 名次
+									li
+										dl
+											/ 題名
+											dt =zh_lorem_words 10 
+											/ 次數
+											dd
 				.side--right
 					.block-d
 			.footer
