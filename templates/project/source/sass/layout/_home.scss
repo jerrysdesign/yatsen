@@ -28,3 +28,31 @@ body {
 	min-height: 410px;
 	background: url('#{$imagesPath}/bg1.png') no-repeat center top;
 }
+
+// HOME
+// ----------------------
+%block {
+	margin-top: 20px;
+}
+.block-a {
+	@include size(780px 120px);
+	background-image: url('#{$imagesPath}/bg2.png');
+	@extend %block;
+}
+
+.block-b {
+	@include size(780px 196px);
+	background-image: url('#{$imagesPath}/bg3.png');
+	@extend %block;
+}
+
+.block-c {
+	@include size(780px 330px);
+	background-image: url('#{$imagesPath}/bg4.png');
+	@extend %block;
+}
+.block-d {
+	@include size(200px 714px);
+	background-image: url('#{$imagesPath}/bg5.png');
+	@extend %block;
+}

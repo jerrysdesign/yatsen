@@ -16,8 +16,20 @@ $page-container: ".container";
 .main-nav { @extend .container;}
 .main { @extend .container;}
 .footer { @extend .container;}
-.area { @include span-columns(13, 17);}
-.side--right {@include span-columns(4 omega, 17);}
+.area {
+	//@include span-columns(13, 17);
+	width: 780px;
+	float: left;
+	margin-right: 20px;
+	display: inline;
+}
+.side--right {
+	//@include span-columns(4 omega, 17);
+	width: 200px;
+	float: right;
+	margin-right: 0;
+	display: inline;
+}
 
 @import "layout/home";
 @import "layout/header";
