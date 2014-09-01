@@ -34,7 +34,7 @@ $baseBackground	: url('#{$imagesPath}/bg0.png');
 
 // Fonts
 
-$headingsFontFamily		: $baseFontFamily;
+$headingsFontFamily		: $fontMing;
 $inputFontFamily		: $baseFontFamily;
 $buttonFontFamily		: $baseFontFamily;
 $codeFontFamily			: $monospace;
@@ -45,12 +45,12 @@ $codeFontFamily			: $monospace;
 // ------------------------------------------------------------
 
 // Base color
-$bodyBackgroundColor	: $EAEDEF;
+$bodyBackgroundColor	: $transparent;
 $bodyColor				: $black-80;
-$headingsColor			: $black-85;
+$headingsColor			: $primary;
 
-$linkColor				: $colorLochmara;
-$linkColorHover			: $colorMandy;
+$linkColor				: $primary;
+$linkColorHover			: $primary;
 
 $colorLinkHover			: $linkColorHover;
 $action					: $linkColor;

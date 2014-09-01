@@ -50,9 +50,16 @@ body {
 	@include size(780px 330px);
 	background-image: url('#{$imagesPath}/bg4.png');
 	@extend %block;
+	.block-c__1,.block-c__2,.block-c__3 {width: 33.333%; padding: 20px; @extend %fl;}
 }
 .block-d {
 	@include size(200px 714px);
 	background-image: url('#{$imagesPath}/bg5.png');
 	@extend %block;
+}
+.block__title {
+	font-family: $headingsFontFamily;
+	color: $headingsColor;
+	font-size: 1em;
+	font-weight: bold;
 }
