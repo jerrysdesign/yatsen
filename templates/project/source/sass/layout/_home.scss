@@ -63,3 +63,24 @@ body {
 	font-size: 1em;
 	font-weight: bold;
 }
+@include with-grid-settings(6,7.8em,0em,0) {
+	.block-b__borwse {
+		@include ul-list-inline();
+		@include reset-ul();
+		@include container;
+		li {
+			background-image: url('#{$imagesPath}/browse.png');
+			
+		}
+		[class^="item-"] {
+			@include span-columns(1);
+	    	@include nth-omega(6n);
+		}
+		@for $i from 0 through 6 {
+			.item-#{$i} {
+				height: 143px;
+				background-position: 7.8em*$i top;
+			}
+		}
+	}
+}
