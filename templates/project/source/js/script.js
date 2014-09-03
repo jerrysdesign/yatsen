@@ -32,9 +32,9 @@ $(document).ready(function() {
 	});
 });
 
-$(function() {      
+$(function() {
 	$(".vertical").scrollable({
-		vertical:true, 
+		vertical:true,
 		size: 1
 	}).mousewheel();
 });

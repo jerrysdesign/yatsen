@@ -219,7 +219,7 @@ body {
 	.vertical {
 		position:relative;
 		overflow:hidden;
-		height: 600px;
+		height: 619px;
 		width: 170px;
 	}
 	.items {
@@ -235,6 +235,10 @@ body {
 	.scroll-down {
 		@extend %scroll-btn;
 		background-image: url('#{$imagesPath}/scroll-down.png');
+	}
+	.disabled {
+		@include opacity(.65);
+		cursor: default;
 	}
 	.item__head {
 		position: relative;
