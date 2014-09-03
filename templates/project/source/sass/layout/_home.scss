@@ -83,9 +83,7 @@ body {
 			line-height: 36px;
 			width: 98px;
 			@extend %text-center;
-		}
-		ul li.active {
-			a {
+			&.current {
 				color: #c04d01;
 				background: url('#{$imagesPath}/search-tab-active.png');
 			}
@@ -181,14 +179,11 @@ body {
 			&:hover {
 				background: url('#{$imagesPath}/tabhover.png');
 			}
-		}
-		li.active {
-			a {
+			&.current {
 				color: $red;
 				background: url('#{$imagesPath}/tabactive.png') center top;
 			}
 		}
-
 	}
 	.hot__head {@extend %cont-font-size;@extend %reset-list-inline;@extend %block-3;}
 	.hot__list {
