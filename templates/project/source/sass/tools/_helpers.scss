@@ -25,8 +25,8 @@
 	font-size:$baseFontSize + 2px; // 18px
 }
 
-%text-centered, .text-centered {
-	@include text-centered;
+%text-center, .text-center {
+	@include text-center;
 }
 
 %text-right, .text-right {

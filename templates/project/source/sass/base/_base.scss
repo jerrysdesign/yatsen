@@ -7,7 +7,7 @@ $base-font-size:	$baseFontSize;
 $base-line-height:	$baseLineHeight;
 @include establish-baseline();
 // $round-to-nearest-half-line: true;
-// $rhythm-unit:		em;
+$rhythm-unit:		em;
 
 
 
@@ -40,7 +40,7 @@ img { max-width: 100%;}
 a {
 	color: $action;
 	text-decoration: none;
-	@include transition();
+	// @include transition();
 	@include link-active-styles {
 		text-decoration: none;
 		color: $actionRespond;

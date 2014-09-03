@@ -1,16 +1,11 @@
 // =Navs
 // -----------------------------------------------------------------------------
 
-$baseFontSize: 12;
-$baseLineHeight: 2;
-$baseLine: $baseFontSize * $baseLineHeight;
-$baseLineInEms: $baseLine / $baseFontSize;
-
 // NavBar
 
 
 %navbar {
-	@include rem('margin-bottom', $baseLineInEms);
+	// margin-bottom: $baseFontSize;
 	@include clearfix;
 	ul {
 		list-style: none;
@@ -19,7 +14,7 @@ $baseLineInEms: $baseLine / $baseFontSize;
 	}
 	li {
 		float: left;
-		@include rem('margin-right', $baseLineInEms);
+		margin-right: $baseFontSize / $baseLineHeight;
 		&:hover {
 			// color: $colorLinkHover;
 		}
@@ -32,7 +27,7 @@ $baseLineInEms: $baseLine / $baseFontSize;
 	ul li span {
 		text-decoration: none;
 		cursor: text;
-		color: rgba(0, 0, 0, .4);
+		// color: rgba(0, 0, 0, .4);
 	}
 }
 %navbar-left {
@@ -42,7 +37,7 @@ $baseLineInEms: $baseLine / $baseFontSize;
 	float: right;
 	li {
 		margin-right: 0;
-		@include rem('margin-left', $baseLineInEms);
+		margin-left: $baseFontSize / $baseLineHeight;
 	}
 }
 
@@ -66,7 +61,7 @@ $baseLineInEms: $baseLine / $baseFontSize;
 
 // Vertical
 %nav {
-	@include rem('margin-bottom', $baseLineInEms);
+	// @include rem('margin-bottom', $baseLineInEms);
 	ul {
 		list-style: none;
 		margin: 0;
@@ -143,7 +138,7 @@ $baseLineInEms: $baseLine / $baseFontSize;
 
 // Breadcrumbs
 %breadcrumbs {
-	@include rem('margin-bottom', $baseLineInEms);
+	// @include rem('margin-bottom', $baseLineInEms);
 	@include clearfix;
 
 	ul {
