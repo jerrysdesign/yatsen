@@ -6,7 +6,7 @@
 $base-font-size:	$baseFontSize;
 $base-line-height:	$baseLineHeight;
 @include establish-baseline();
-$round-to-nearest-half-line: true;
+// $round-to-nearest-half-line: true;
 // $rhythm-unit:		em;
 
 
@@ -50,11 +50,11 @@ a {
 // HEADINGS
 // -------------------------
 
-/* All Headings */
+///* All Headings */
 // h1, h2, h3, h4, h5, h6 {}
-#{headings()} {
-	@include reset-box-model;
-}
+// #{headings()} {
+// 	@include reset-box-model;
+// }
 
 /* Individual Headings */
 h1 {}
