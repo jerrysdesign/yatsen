@@ -112,8 +112,8 @@
 	@include is-hidden;
 }
 
-.is-show-block, %is-show-block {
-	@include is-show-block;
+.is-show, %is-show {
+	@include is-show;
 }
 
 .is-show-inline, %is-show-inline {

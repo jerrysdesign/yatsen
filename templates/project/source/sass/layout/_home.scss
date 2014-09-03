@@ -149,6 +149,8 @@ body {
 		@extend %cont-font-size;
 	}
 }
+
+// 歷史上的今天
 .historical-anniversaries {
 	.historical-anniversaries__list {@extend %cont-font-size;@extend %reset-list;dl,dt,dd{@extend %zero}}
 	.historical-anniversaries__list--date {font-size: 14px; color:$colorPumpkin;@extend %bold;}
@@ -161,6 +163,7 @@ body {
 		@extend %is-show-inline;
 	}
 }
+
 // 熱門
 .hot {
 	.hot__list {}
@@ -199,4 +202,75 @@ body {
 		}
 	}
 	.item {margin: 5px 0;@extend %list-inline;dl{margin-left: 30px;}dd{@extend %fr;}}
+}
+%scroll-btn {
+	@include size(200px 28px);
+	@extend %ir;
+	@extend %is-show;
+	margin: 0 -15px;
+}
+%time-line__head {
+	position: absolute;
+	color:$colorPumpkin;
+}
+// 大事年表
+.time-line {
+	@extend %block-inner;
+	.vertical {
+		position:relative;
+		overflow:hidden;
+		height: 600px;
+		width: 170px;
+	}
+	.items {
+		position:absolute;
+		height:20000em;
+	}
+	.block__title {@extend %text-center;}
+	.scroll-top {
+		@extend %scroll-btn;
+		background-image: url('#{$imagesPath}/scroll-top.png');
+
+	}
+	.scroll-down {
+		@extend %scroll-btn;
+		background-image: url('#{$imagesPath}/scroll-down.png');
+	}
+	.item__head {
+		position: relative;
+		background-image: url('#{$imagesPath}/year.png');
+		@include size(170px 40px);
+		margin-bottom: 10px;
+		.age {
+			@extend %time-line__head;
+			font-size: 36px;
+			@extend bold;
+			top: 10px;
+		}
+
+		.yy {
+			@extend %time-line__head;
+			@extend %cont-font-size;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	.item__photo {
+		padding: 6px;
+		border: 1px solid $black-30;
+		background-color: #fff;
+		@include box-shadow(0 0 5px rgba(0,0,0,.3));
+		margin-bottom: 10px;
+		@extend %cont-font-size;
+		line-height: 1.5;
+		color: $black-60;
+	}
+	.item__list {
+		@extend %cont-font-size;
+		line-height: 1.5;
+		li {
+			padding-left: 15px;
+			background: url('#{$imagesPath}/arr-01.png')no-repeat;
+		}
+	}
 }

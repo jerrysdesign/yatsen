@@ -119,23 +119,38 @@ html.no-js
 														/ 次數
 														dd 999
 				.side--right
-					.block-d
+					.block-d.time-line
 						h2.block__title 國父大事年表
-						.scroll-top
-						ul.time-line style='overflow-y:auto;height:600px'
-							-3.times do
-								li.item
-									/ 歲
-									span 99
-									/ 年份
-									span 民國xx年（1999）
-									.photo
-										= image_tag(lorem_image("230x200"))
-										p =zh_lorem_paragraph
-										ul
-											li =zh_lorem_paragraph
-											li =zh_lorem_paragraph
-						.scroll-bottom
+						a.scroll-top.prevPage href="javascript:;" TOP
+						.vertical
+							ul.items
+								-5.times do
+									li.time-line__item
+										.item__head
+											/ 歲
+											span.age 99
+											/ 年份
+											span.yy 民國xx年（1999）
+										.item__photo
+											= image_tag(lorem_image("230x200"))
+											p =zh_lorem_sentence
+										ul.item__list
+											li =zh_lorem_sentence
+											li =zh_lorem_sentence
+								-5.times do
+									li.time-line__item
+										.item__head
+											/ 歲
+											span.age 99
+											/ 年份
+											span.yy 民國xx年（1999）
+										.item__photo
+											= image_tag(lorem_image("230x200"))
+											p =zh_lorem_sentence
+										ul.item__list
+											li =zh_lorem_sentence
+											li =zh_lorem_sentence
+						a.scroll-down.nextPage href="javascript:;" DOWN
 			.footer
 				.logo0
 				.copyright
@@ -149,5 +164,6 @@ html.no-js
 		script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" 
 		| <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 		script src="js/vendor/jquery-migrate-git.min.js"
+		script src="http://oxid-module-euvat.googlecode.com/svn-history/r2/trunk/out/basic/src/js/jquery.tools-full.min.js"
 		script src="js/plugins.js"
 		script src="js/script.js"
