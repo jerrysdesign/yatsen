@@ -41,12 +41,12 @@ html.no-js
 					.search-utility
 						.searh-tab
 							ul
-								li 簡易檢索
-								li 進階檢索
+								li: a href="javascript:;" 簡易檢索
+								li: a href="javascript:;" 進階檢索
 						form.searh-content
 							ul
 								/ 簡易檢索
-								li.searh-utility--seach
+								li.tabs_item.searh-utility--seach
 									ul.search-row
 										li
 											input type="text"
@@ -73,7 +73,8 @@ html.no-js
 												li: a href="javascript:;" =zh_lorem_words 5 
 
 								/ 進階檢索
-								li.searh-utility--adv-seach
+								li.tabs_item.searh-utility--adv-seach
+									p =zh_lorem_paragraph				
 					.block-b
 						h2.block__title 【分類瀏覽】
 						ul.block-b__browse
@@ -146,4 +147,4 @@ html.no-js
 		| <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 		script src="js/vendor/jquery-migrate-git.min.js"
 		script src="js/plugins.js"
-		script src="js/main.js"
+		script src="js/script.js"
