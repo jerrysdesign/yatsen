@@ -5,8 +5,8 @@
 // @import "compass/reset";
 // or
 // normalize
-@import "base/normalize";
-
+// @import "base/normalize";
+@include global-reset;
 // ======================
 // Base Styles
 // ========================
