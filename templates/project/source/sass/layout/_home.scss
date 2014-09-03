@@ -4,6 +4,7 @@
 
 .home {
 }
+
 %double-bg {
 	&:before, &:after {
 		position: absolute;
@@ -34,9 +35,7 @@ body {
 %block {
 	margin-top: 20px;
 }
-.block-a {
-	@include size(780px 120px);
-	background-image: url('#{$imagesPath}/bg2.png');
+.search-utility {
 	@extend %block;
 }
 
@@ -46,31 +45,59 @@ body {
 	@extend %block;
 	@extend %block-inner
 }
-
 .block-c {
 	@include size(780px 330px);
 	background-image: url('#{$imagesPath}/bg4.png');
 	@extend %block;
-	.block-c__1,.block-c__2,.block-c__3 {width: 33.333%; @extend %block-inner; @extend %fl;}
+	.interactive-map,.block-c__2,.block-c__3 {
+		width: 33.333%;
+		@extend %block-inner;
+		@extend %fl;
+	}
 }
 .block-d {
 	@include size(200px 714px);
 	background-image: url('#{$imagesPath}/bg5.png');
 	@extend %block;
 }
+
 .block__title {
 	font-family: $headingsFontFamily;
 	color: $headingsColor;
-	font-size: 1em;
+	@include adjust-font-size-to(16px);
+	margin-bottom: .5em;
 	font-weight: bold;
 }
 %block-inner {
-	padding: 20px 15px;
+	padding: 15px;
 }
+
+// 檢索功能
+.searh-utility {
+}
+.searh-tab {
+	@extend %navbar;
+}
+.searh-content {
+	font-size: .83333em;
+	background-image: url('#{$imagesPath}/bg2.png');
+	ul {@extend  %reset-list;}
+}
+.searh-utility--seach {
+	@include size(780px 120px);
+	@extend %block-inner;
+}
+.search-row {
+	@extend %reset-list;
+	@extend %forms-inline-list;
+	@extend %is-show-inline;
+}
+
+// 分類瀏覽
 @include with-grid-settings(6,7.8em,0em,0) {
 	.block-b__browse {
-		@include ul-list-inline();
-		@include reset-ul();
+		@extend %reset-list-inline;
+		@extend %reset-list;
 		@include container;
 		li {
 			@include span-columns(1);
@@ -79,14 +106,48 @@ body {
 		.item {
 			background-image: url('#{$imagesPath}/browse.png');
 			@extend %ir;
+			height: 143px;
 			display: block;
 		}
 		@for $i from 0 through 6 {
 			.item.item-#{$i} {
-				height: 143px;
 				// 7.8em*16=124.8 => 125px
-				background-position: 125px*$i top;
+				background-position-x: 125px*$i;
 			}
 		}
 	}
+}
+
+%cont-font-size {
+	@include adjust-font-size-to(13px);
+}
+
+// 互動地圖
+.interactive-map {
+	.subheading {
+		margin: 10px 0;
+		@extend %cont-font-size;
+	}
+}
+.historical-anniversaries {
+	.historical-anniversaries__list {@extend %cont-font-size;@extend %reset-list;dl,dt,dd{@extend %zero}}
+	.historical-anniversaries__list--date {font-size: 14px; color:$colorPumpkin;@extend %bold;}
+}
+
+// 熱門
+.hot {
+	.hot__list {}
+	.hot__tab {@extend %reset-list-inline;}
+	.hot__head {@extend %cont-font-size;@extend %reset-list-inline;}
+	.hot__list {
+		@extend %cont-font-size;
+		@extend %cont-font-size;
+		@extend %ordered-inside;
+		@extend %zero;
+		li {
+			padding: 0 5px;
+			&:nth-child(odd) {background-color: $black-20;}
+		}
+	}
+	.item {margin: 5px 0;@extend %list-inline;dl{margin-left: 30px;}dd{@extend %fr;}}
 }

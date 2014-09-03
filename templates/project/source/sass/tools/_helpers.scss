@@ -9,6 +9,22 @@
 %sans-serif {   font-family: $sansSerif }   // Sans-Serif Fonts
 %monospace  {   font-family: $monospace }   // Monospace Fonts
 
+%super-small, .super-small {
+	font-size:$baseFontSize - 5px; // 11px
+}
+%small, .small {
+	font-size:$baseFontSize - 3px; // 13px
+}
+%lead, .lead {
+	font-size:$baseFontSize + 4px; // 20px
+}
+%big, .big{
+	color:$baseFontSize + 4px; // 20px
+}
+%quote, .quote {
+	font-size:$baseFontSize + 2px; // 18px
+}
+
 %text-centered, .text-centered {
 	@include text-centered;
 }
@@ -122,15 +138,43 @@
 	@include max-width;
 }
 
-// UL
+// List
 // -------------------------------------------------------
-.ul-list-inline, %ul-list-inline {
-	@include ul-list-inline;
+
+%unordered {
+	@include unordered;
 }
 
-.reset-ul, %reset-ul {
-	@include reset-ul;
+%unordered-inside {
+	@include unordered-inside;
 }
+
+%ordered {
+	@include ordered;
+}
+
+%ordered-inside {
+	@include ordered-inside;
+}
+
+%nobullet {
+	@include nobullet;
+}
+// UL
+// -------------------------------------------------------
+
+.reset-list, %reset-list {
+	@include reset-list;
+}
+
+.list-inline, %list-inline {
+	@include list-inline;
+}
+
+.reset-list-inline, %reset-list-inline {
+	@include reset-list-inline;
+}
+
 
 
 // -------------------------------------------------------
@@ -141,32 +185,32 @@
 	@include ir;
 }
 
-/* Float-left */
+// Float-lef
 .fl, %fl {
 	@include fl;
 }
 
-/* Float-right */
+// Float-right
 .fr, %fr {
 	@include fr;
 }
 
-/* Rest-float */
+// Rest-float
 .rf, %rf {
 	@include reset-float;
 }
 
-/* Overflow hidden */
+// Overflow hidden
 .oh, %oh {
 	@include clearfix;
 }
 
-/* Center block */
+// Center block
 %center-block, .center-block {
 	@include center-block;
 }
 
-/* Clear float hack */
+// Clear float hack
 .clearfix, %pie-clearfix {
 	@include pie-clearfix;
 }

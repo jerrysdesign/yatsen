@@ -372,8 +372,8 @@
 }
 
 @mixin zero {
-	margin: 0 !important;
-	padding: 0 !important;
+	margin: 0;
+	padding: 0;
 }
 
 @mixin clear {
@@ -381,15 +381,15 @@
 }
 
 @mixin last {
-	margin-right: 0 !important;
+	margin-right: 0;
 }
 
 @mixin pause {
-	margin-bottom: 0.75em !important;
+	margin-bottom: 0.75em;
 }
 
 @mixin end {
-	margin-bottom: 0 !important;
+	margin-bottom: 0;
 }
 
 @mixin no-leader {
@@ -422,7 +422,7 @@
 }
 
 @mixin highlight {
-	background-color: #ffff9e !important;
+	background-color: #ffff9e;
 }
 
 @mixin close {
@@ -458,9 +458,6 @@
 @mixin is-show-inline {
 	display: inline;
 	display: inline-block;
-	// float: none !important;
-	// @include has-layout-zoom;
-	// @include has-layout-block;
 }
 
 @mixin is-table {
@@ -522,20 +519,30 @@
 	}
 }
 
-// = UL
+// = List
 // -----------------------------
-@mixin ul-list-inline() {
-	list-style: none;
-	margin: 0;
-	padding: 0;
 
-	li {
-		@include inline-block();
+// form compass
+@mixin reset-list-style {
+	list-style: none;
+}
+
+@mixin reset-list {
+	@include reset-list-style;
+	@include zero;
+}
+
+@mixin list-inline {
+	@include zero;
+	li, dt, dd {
+		@include inline-block;
 	}
 }
 
-@mixin reset-ul() {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+@mixin reset-list-inline {
+	@include zero;
+	@include reset-list-style;
+	li, dt, dd {
+		display: inline-block;
+	}
 }

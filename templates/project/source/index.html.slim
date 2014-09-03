@@ -22,9 +22,9 @@ html.no-js
 				.logo.logo1
 				.top-nav
 					ul
-			        	li: a href="javascript:;" 一般民眾版
-			        	li.active: a href="javascript:;" 學術研究版
-			        	li: a href="javascript:;" 回首頁
+						li: a href="javascript:;" 一般民眾版
+						li.active: a href="javascript:;" 學術研究版
+						li: a href="javascript:;" 回首頁
 			.main-nav
 				ul
 					li: a href="javascript:;" 網站簡介
@@ -36,11 +36,46 @@ html.no-js
 					li: a href="javascript:;" 熱門排行
 					li: a href="javascript:;" 相關連結
 					li: a href="javascript:;" 個人化服務
-			.main
+			.main.home
 				.area
-					.block-a
+					.search-utility
+						.searh-tab
+							ul
+								li 簡易檢索
+								li 進階檢索
+						form.searh-content
+							ul
+								/ 簡易檢索
+								li.searh-utility--seach
+									ul.search-row
+										li
+											input type="text"
+										li
+											select
+												option 不限欄位
+												option select1
+												option select2
+										li
+											button 搜尋
+									.clearfix
+									lebel
+										| 資料類型:
+										ul.search-row
+											- (1..5).each do |n|
+												li
+													input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
+													label for="checkbox-#{n}"Check #{n}
+									.clearfix
+									lebel
+										| 熱門檢索詞:
+										ul.search-row
+											-5.times do
+												li: a href="javascript:;" =zh_lorem_words 5 
+
+								/ 進階檢索
+								li.searh-utility--adv-seach
 					.block-b
-						h2.block__title【分類瀏覽】
+						h2.block__title 【分類瀏覽】
 						ul.block-b__browse
 							li: a.item.item-1 href="javascript:;" 國管紀要
 							li: a.item.item-2 href="javascript:;" 孫文專書
@@ -49,38 +84,54 @@ html.no-js
 							li: a.item.item-5 href="javascript:;" 國父年譜
 							li: a.item.item-6 href="javascript:;" 國父全集
 					.block-c
-						.block-c__1
+						.block-c__1.interactive-map
 							h2.block__title 【互動地圖】
-							div
-								| 跟著國父的足跡走遍天下
-								= image_tag(lorem_image("230x200"))
+							.subheading 跟著國父的足跡走遍天下
+							= image_tag(lorem_image("230x200"))
 
-						.block-c__2
+						.block-c__2.historical-anniversaries
 							h2.block__title 【歷史上的今天】
-							dl
+							dl.historical-anniversaries__list
 								-4.times do
-									dt =lorem_date("%Y/%m/%d", 2010..2025)
-									dd =zh_lorem_sentence 
-						.block-c__3
-							ul
+									dt.historical-anniversaries__list--date =lorem_date("%Y.%m.%d", 2010..2025)
+									dd =zh_lorem_sentence
+							a.fr.small href="javascript:;" 【看更多】
+						.block-c__3.hot
+							ul.hot__tab
 								li 熱門點閱
 								li 熱門收藏
 								li 熱門推薦
-							ul
+							ul.hot__head
 								li 名次
 								li 題名
 								li 次數
-							ol
+							ol.hot__list
 								-8.times do
 									/ 名次
 									li
-										dl
+										dl.item
 											/ 題名
 											dt =zh_lorem_words 10 
 											/ 次數
-											dd
+											dd 999
 				.side--right
 					.block-d
+						h2.block__title 國父大事年表
+						.scroll-top
+						ul.time-line style='overflow-y:auto;height:600px'
+							-3.times do
+								li.item
+									/ 歲
+									span 99
+									/ 年份
+									span 民國xx年（1999）
+									.photo
+										= image_tag(lorem_image("230x200"))
+										p =zh_lorem_paragraph
+										ul
+											li =zh_lorem_paragraph
+											li =zh_lorem_paragraph
+						.scroll-bottom
 			.footer
 				.logo0
 				.copyright
