@@ -73,38 +73,39 @@ body {
 }
 
 // 檢索功能
-.searh-utility {
-}
-.searh-tab {
-	@extend %navbar;
-	li { margin-right: 3px;}
-	a {
-		background: url('#{$imagesPath}/search-tab-link.png');
-		line-height: 36px;
-		width: 98px;
-		@extend %text-center;
-	}
-	ul li.active {
+.search-utility {
+
+	.search-tab {
+		@extend %navbar;
+		li { margin-right: 3px;}
 		a {
-			color: #c04d01;
-			background: url('#{$imagesPath}/search-tab-active.png');
+			background: url('#{$imagesPath}/search-tab-link.png');
+			line-height: 36px;
+			width: 98px;
+			@extend %text-center;
+		}
+		ul li.active {
+			a {
+				color: #c04d01;
+				background: url('#{$imagesPath}/search-tab-active.png');
+			}
 		}
 	}
-}
-.searh-content {
-	font-size: .83333em;
-	background-image: url('#{$imagesPath}/bg2.png');
-	background-color: #fff;
-	ul {@extend  %reset-list;}
-}
-.searh-utility--seach {
-	@include size(780px 120px);
-	@extend %block-inner;
-}
-.search-row {
-	@extend %reset-list;
-	@extend %forms-inline-list;
-	@extend %is-show-inline;
+	.tab-content {
+		font-size: .83333em;
+		background-image: url('#{$imagesPath}/bg2.png');
+		background-color: #fff;
+		ul {@extend  %reset-list;}
+	}
+	.search-utility--seach {
+		@include size(780px 120px);
+		@extend %block-inner;
+	}
+	.search-row {
+		@extend %reset-list;
+		@extend %forms-inline-list;
+		@extend %is-show-inline;
+	}
 }
 // color
 .tabs_item {
@@ -153,11 +154,40 @@ body {
 	.historical-anniversaries__list--date {font-size: 14px; color:$colorPumpkin;@extend %bold;}
 }
 
+%block-3 {
+	width: 100%;
+	>li {
+		width: 32%;
+		@extend %is-show-inline;
+	}
+}
 // 熱門
 .hot {
 	.hot__list {}
-	.hot__tab {@extend %reset-list-inline;}
-	.hot__head {@extend %cont-font-size;@extend %reset-list-inline;}
+	.hot__tab {
+		@extend %navbar;
+		font-size: 14px;
+		@extend %block-3;
+		a {
+			background: url('#{$imagesPath}/tablink.png') center top;
+			line-height: 30px;
+			padding-bottom: 4px;
+			color: black;
+			@extend %text-center;
+			@extend .bold;
+			&:hover {
+				background: url('#{$imagesPath}/tabhover.png');
+			}
+		}
+		li.active {
+			a {
+				color: $red;
+				background: url('#{$imagesPath}/tabactive.png') center top;
+			}
+		}
+
+	}
+	.hot__head {@extend %cont-font-size;@extend %reset-list-inline;@extend %block-3;}
 	.hot__list {
 		@extend %cont-font-size;
 		@extend %cont-font-size;

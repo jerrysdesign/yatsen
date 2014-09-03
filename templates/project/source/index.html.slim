@@ -39,14 +39,14 @@ html.no-js
 			.main.home
 				.area
 					.search-utility
-						.searh-tab
+						.search-tab
 							ul
 								li: a href="javascript:;" 簡易檢索
 								li: a href="javascript:;" 進階檢索
-						form.searh-content
+						form.tab-content
 							ul
 								/ 簡易檢索
-								li.tabs_item.searh-utility--seach
+								li.tabs_item.search-utility--seach
 									ul.search-row
 										li
 											input type="text"
@@ -73,7 +73,7 @@ html.no-js
 												li: a href="javascript:;" =zh_lorem_words 5 
 
 								/ 進階檢索
-								li.tabs_item.searh-utility--adv-seach
+								li.tabs_item.search-utility--adv-seach
 									p =zh_lorem_paragraph				
 					.block-b
 						h2.block__title 【分類瀏覽】
@@ -99,22 +99,25 @@ html.no-js
 							a.fr.small href="javascript:;" 【看更多】
 						.block-c__3.hot
 							ul.hot__tab
-								li 熱門點閱
-								li 熱門收藏
-								li 熱門推薦
+								li: a href="javascript:;" 熱門點閱
+								li: a href="javascript:;" 熱門收藏
+								li: a href="javascript:;" 熱門推薦
 							ul.hot__head
 								li 名次
 								li 題名
-								li 次數
-							ol.hot__list
-								-8.times do
-									/ 名次
-									li
-										dl.item
-											/ 題名
-											dt =zh_lorem_words 10 
-											/ 次數
-											dd 999
+								li.text-right 次數
+							.tab-content
+								-3.times do
+									.tabs_item
+										ol.hot__list
+											-8.times do
+												/ 名次
+												li
+													dl.item
+														/ 題名
+														dt =zh_lorem_words 10 
+														/ 次數
+														dd 999
 				.side--right
 					.block-d
 						h2.block__title 國父大事年表
