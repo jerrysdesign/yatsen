@@ -74,14 +74,13 @@ body {
 
 // 檢索功能
 .search-utility {
-
 	.search-tab {
 		@extend %navbar;
 		li { margin-right: 3px;}
 		a {
 			background: url('#{$imagesPath}/search-tab-link.png');
 			line-height: 36px;
-			width: 98px;
+			width: 126px;/*98*/
 			@extend %text-center;
 			&.current {
 				color: #c04d01;
@@ -99,6 +98,7 @@ body {
 		@include size(780px 120px);
 		@extend %block-inner;
 	}
+
 	.search-row {
 		@extend %reset-list;
 		@extend %forms-inline-list;
@@ -115,11 +115,43 @@ body {
 	@extend %btn-color1;
 }
 
+// 簡易檢索
+.search-page {
+	.search-tab {
+		a{
+			
+		}
+	}
+}
 
 // color
 .tabs_item {
 	display: none;
 	&:first-child {display: block;}
+}
+
+.keyword{
+	margin:0 4px;
+	color: $colorPumpkin
+};
+
+.pagination {
+	@extend %pagination;
+}
+
+.bar01 {
+	.col1 {
+		@extend %line-block;
+	}
+	.col2 {
+		@extend %line-block;
+	}
+	.col3 {
+		@extend %line-block;
+	}
+	.col4 {
+		@extend %line-block;
+	}
 }
 
 // 分類瀏覽
