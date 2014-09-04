@@ -197,13 +197,7 @@ body {
 		}
 	}
 	.hot__head {@extend %cont-font-size;@extend %reset-list-inline;@extend %block-3;}
-	.hot__list {
-		@extend %cont-font-size;
-		@extend %cont-font-size;
-		@extend %ordered-inside;
-		@extend %zero;
-		li {
-			padding: 0 5px;
+	.hot__list {@extend %cont-font-size;@extend %cont-font-size;@extend %ordered-inside;@extend %zero;li {padding: 0 5px;
 			&:nth-child(odd) {background-color: $black-20;}
 		}
 	}
@@ -213,13 +207,13 @@ body {
 		display: inline-block;
 		@extend %list-inline;
 		dt{
-			width: 70%;
+			@include size(70% 100%);
 		}
 		dd{
 			@extend %fr;
-			width: 20%;
+			@extend %text-right;
+			@include size(20% 100%);
 			margin-left: 5%;
-			text-align: right;
 		}
 	}
 }
