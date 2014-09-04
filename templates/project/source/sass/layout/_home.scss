@@ -207,7 +207,21 @@ body {
 			&:nth-child(odd) {background-color: $black-20;}
 		}
 	}
-	.item {margin: 5px 0;@extend %list-inline;dl{margin-left: 30px;}dd{@extend %fr;}}
+	.item {
+		// margin: 5px 0;
+		width: 89%;
+		display: inline-block;
+		@extend %list-inline;
+		dt{
+			width: 70%;
+		}
+		dd{
+			@extend %fr;
+			width: 20%;
+			margin-left: 5%;
+			text-align: right;
+		}
+	}
 }
 %scroll-btn {
 	@include size(200px 28px);
