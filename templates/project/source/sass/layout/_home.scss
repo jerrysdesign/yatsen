@@ -104,7 +104,18 @@ body {
 		@extend %forms-inline-list;
 		@extend %is-show-inline;
 	}
+	.clearfix {margin:4px 0;}
 }
+
+%btn-color1 {
+	@extend %cont-font-size;
+    @include btn($black-35);
+}
+.search-utility__btn--search {
+	@extend %btn-color1;
+}
+
+
 // color
 .tabs_item {
 	display: none;
