@@ -208,6 +208,8 @@ body {
 
 // 歷史上的今天
 .historical-anniversaries {
+	overflow: auto;
+	height: 300px;
 	.historical-anniversaries__list {@extend %cont-font-size;@extend %reset-list;dl,dt,dd{@extend %zero}}
 	.historical-anniversaries__list--date {font-size: 14px; color:$colorPumpkin;@extend %bold;}
 }
