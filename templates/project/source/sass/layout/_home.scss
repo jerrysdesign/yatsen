@@ -5,6 +5,17 @@
 .home {
 }
 
+.browsehappy {
+	position: fixed;
+	width: 100%;
+	padding: 20px 40px;
+	background-color: $colorSunFlower;
+	border: 4px solid $colorCarrot;
+	color: $colorWetAsphalt;
+	z-index: 9999;
+	a { font-weight: bolder; text-decoration: underline; color: #fff;}
+}
+
 %double-bg {
 	&:before, &:after {
 		position: absolute;
