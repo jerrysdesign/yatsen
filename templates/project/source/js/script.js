@@ -44,3 +44,16 @@ $(function() {
 	});
 	
 });
+
+;(function ($){
+	$.fn.striped = function (tag){
+		var $this = $(this);
+		$this.each(function(){
+			tag.addClass("odd");
+		});
+	};
+})(jQuery);
+// $(function(){
+// 	var _def = $('.hot__list li:odd');
+// 	$(this).striped(_def);
+// });

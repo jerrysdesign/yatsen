@@ -203,14 +203,20 @@ body {
 		@extend %ordered-inside;
 		@extend %zero;
 		li {
-			padding: 0 5px;
-			&:nth-child(odd) {background-color: $black-20;}
+			padding: 2px 5px;
+			&:nth-child(odd) {
+				@extend %table-striped--odd;
+			}
+			.lt-ie9 & {
+				&.odd {
+					@extend %table-striped--odd;
+				}
+			}
 		}
 	}
 	.item {
-		// margin: 5px 0;
 		width: 89%;
-		display: inline-block;
+		@extend %is-show-inline;
 		@extend %list-inline;
 		dt{
 			width: 70%;
@@ -223,6 +229,10 @@ body {
 		}
 	}
 }
+%table-striped--odd {
+	background-color: $black-20;
+}
+
 %scroll-btn {
 	@include size(200px 28px);
 	@extend %ir;
