@@ -264,12 +264,12 @@ body {
 			}
 			padding: 2px 5px 2px 2em;
 			&:nth-child(odd) {
-				@extend %table-striped--odd;
+				background-color: $black-15;
 			}
 			// .lt-ie9
 			.lt-ie9 & {
 				&.odd {
-					background-color: $black-20;
+					background-color: $black-15;
 				}
 			}
 		}
@@ -287,20 +287,7 @@ body {
 		}
 	}
 }
-%table-striped--odd {
-	background-color: $black-20;
-}
 
-%scroll-btn {
-	@include size(200px 28px);
-	@extend %ir;
-	@extend %is-show;
-	margin: 0 -15px;
-}
-%time-line__head {
-	position: absolute;
-	color:$colorPumpkin;
-}
 // 大事年表
 .time-line {
 	@extend %block-inner;
@@ -365,4 +352,14 @@ body {
 			background: url('#{$imagesPath}/arr-01.png')no-repeat;
 		}
 	}
+}
+%scroll-btn {
+	@include size(200px 28px);
+	@extend %ir;
+	@extend %is-show;
+	margin: 0 -15px;
+}
+%time-line__head {
+	position: absolute;
+	color:$colorPumpkin;
 }
