@@ -246,9 +246,10 @@ body {
 			&:nth-child(odd) {
 				@extend %table-striped--odd;
 			}
+			// .lt-ie9
 			.lt-ie9 & {
 				&.odd {
-					@extend %table-striped--odd;
+					background-color: $black-20;
 				}
 			}
 		}
