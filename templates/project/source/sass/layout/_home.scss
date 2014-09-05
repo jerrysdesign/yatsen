@@ -71,21 +71,25 @@ body {
 %block-inner {
 	padding: 15px;
 }
-
+// #F4F2E4
+// #E6E2CF
+// #D3CEB2
 // 檢索功能
 .search-utility {
-
 	.search-tab {
 		@extend %navbar;
 		li { margin-right: 3px;}
 		a {
-			background: url('#{$imagesPath}/search-tab-link.png');
+			background-color: #E6E2CF;
+			@include border-radius(6px 6px 0 0);
+			@include background-image(linear-gradient(#F4F2E4, #D3CEB2));
 			line-height: 36px;
-			width: 98px;
+			padding: 0 1em;
 			@extend %text-center;
 			&.current {
 				color: #c04d01;
-				background: url('#{$imagesPath}/search-tab-active.png');
+				background-color: #FFF;
+				@include background-image(linear-gradient(#FFF, #FFF));
 			}
 		}
 	}
@@ -99,6 +103,7 @@ body {
 		@include size(780px 120px);
 		@extend %block-inner;
 	}
+
 	.search-row {
 		@extend %reset-list;
 		@extend %forms-inline-list;
@@ -115,11 +120,43 @@ body {
 	@extend %btn-color1;
 }
 
+// 簡易檢索
+.search-page {
+	.search-tab {
+		a{
+			
+		}
+	}
+}
 
 // color
 .tabs_item {
 	display: none;
 	&:first-child {display: block;}
+}
+
+.keyword{
+	margin:0 4px;
+	color: $colorPumpkin
+};
+
+.pagination {
+	@extend %pagination;
+}
+
+.bar01 {
+	.col1 {
+		@extend %line-block;
+	}
+	.col2 {
+		@extend %line-block;
+	}
+	.col3 {
+		@extend %line-block;
+	}
+	.col4 {
+		@extend %line-block;
+	}
 }
 
 // 分類瀏覽
@@ -197,6 +234,7 @@ body {
 		}
 	}
 	.hot__head {@extend %cont-font-size;@extend %reset-list-inline;@extend %block-3;}
+
 	.hot__list {
 		@extend %cont-font-size;
 		@extend %cont-font-size;
@@ -219,13 +257,13 @@ body {
 		@extend %is-show-inline;
 		@extend %list-inline;
 		dt{
-			width: 70%;
+			@include size(70% 100%);
 		}
 		dd{
 			@extend %fr;
-			width: 20%;
+			@extend %text-right;
+			@include size(20% 100%);
 			margin-left: 5%;
-			text-align: right;
 		}
 	}
 }

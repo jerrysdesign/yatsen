@@ -214,3 +214,8 @@
 .clearfix, %pie-clearfix {
 	@include pie-clearfix;
 }
+
+%line-block
+{
+	@include is-show-inline;
+}
