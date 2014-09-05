@@ -126,19 +126,130 @@ body {
 }
 %btn-color1 {
 	@extend %cont-font-size;
-    @include btn($black-35);
+    @include btn($color1,$color1);
 }
+%btn-color-df {
+	@extend %cont-font-size;
+    @include btn($black-0,$black-5);
+    border:1px solid $black-30;
+    color:black;
+}
+
 .search-utility__btn--search {
 	@extend %btn-color1;
+}
+.btn--df {
+	@extend %btn-color-df;
+	&:hover {
+		color:black;
+	}
 }
 
 // 簡易檢索
 .search-page {
-	.search-tab {
-		a{
-			
+	.tab-content {
+		background: #fff;
+		padding: 10px;
+	}
+}
+.search_list {
+	margin-top: 10px;
+	caption, tfoot td{
+		margin: 1px 0;
+		padding: 7px 0;
+		background-color: $black-10;
+	}
+	th, td {
+		@extend %text-center;
+	}
+	thead {
+		tr {
+			background-color: $black-20;
+		}
+		th {
+			padding: 2px 0;
 		}
 	}
+	tbody {
+		tr {
+			border-bottom: 1px solid $black-5;
+		}
+		td {
+			padding: 5px 0;
+		}
+	}
+	.search-title {
+		text-align: left;
+		a {
+			color: #36c;
+		}
+	}
+}
+
+.pagination {
+	@extend %pagination;
+	li {
+		a, span {
+			padding: 3px 6px;
+		}
+		a {
+			&:hover {
+				background: #7a99d9;
+			}
+		}
+		span {
+			background: #7a99d9;
+			color: #fff;
+			border: 0;
+		}
+	}
+}
+
+.bar01 {
+	text-align: center;
+	.col1 {
+		width: 28%;
+		padding-left:2%;
+		text-align: left;
+		@extend %fl;
+	}
+	.col2 {
+		width: 30%;
+		padding-left:4%;
+		@extend %fl;
+	}
+	.col3 {
+		width: 22%;
+		@extend %fl;
+	}
+	.col4 {
+		width: 20%;
+		@extend %fl;
+	}
+}
+
+/* pages */
+li.pages-1, li.pages-2, li.pages-3, li.pages-4{
+	a,&:hover a{
+		width: 20px;
+		height: 20px;
+		background:transparent url('../img/pages.png'); background-repeat: no-repeat;
+	}
+	&:hover a {
+		background-image: url('../img/pages-over.png');
+	}
+}
+li.pages-1 a,li.pages-1:hover a{
+	background-position: 0 0;
+}
+li.pages-2 a,li.pages-2:hover a{
+	background-position: 0 -20px;
+}
+li.pages-3 a,li.pages-3:hover a{
+	background-position: 0 -40px;
+}
+li.pages-4 a,li.pages-4:hover a{
+	background-position: 0 -60px;
 }
 
 // color
@@ -152,24 +263,6 @@ body {
 	color: $colorPumpkin
 };
 
-.pagination {
-	@extend %pagination;
-}
-
-.bar01 {
-	.col1 {
-		@extend %line-block;
-	}
-	.col2 {
-		@extend %line-block;
-	}
-	.col3 {
-		@extend %line-block;
-	}
-	.col4 {
-		@extend %line-block;
-	}
-}
 
 // 分類瀏覽
 @include with-grid-settings(6,7.8em,0em,0) {

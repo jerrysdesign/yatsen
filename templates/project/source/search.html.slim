@@ -65,17 +65,17 @@ html.no-js lang="zh-tw"
 										li
 											a.search-utility__btn--search href="javascript:;" 搜尋
 
-									table width="100%" border="0"
+									table.search_list width="100%" border="0"
 										caption
 											= render "partials/bar_01"
 										thead
 											tr
-												th width="10%": a.search-utility__btn--search href="javascript:;" 全選
-												th width="10%" 影像瀏覽
-												th width="50%" 題名
-												th width="10%" 作者
-												th width="10%" 日期
-												th width="10%" 資料類型
+												th width="8%": a.btn--df href="javascript:;" 全選
+												th width="8%" 影像瀏覽
+												th width="48%" 題名
+												th width="12%" 作者
+												th width="12%" 日期
+												th width="12%" 資料類型
 										tfoot
 											tr
 												td colspan="6"
@@ -85,7 +85,7 @@ html.no-js lang="zh-tw"
 												tr
 													td: input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
 													td: img src="img/icon-img.png"/
-													td: a href="javascript:;" 
+													td.search-title: a href="javascript:;" 
 														| 致
 														span.keyword 唐繼堯
 														| 盼發起通電擁護非常國會正式會議電

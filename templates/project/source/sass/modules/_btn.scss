@@ -22,7 +22,7 @@
     }
 }
 
-@mixin btn($color) {
+@mixin btn($color,$color1) {
     @extend %btn;
     @include filter-gradient($color, darken($color, 10%)); // IE6-8
     @include background-image(linear-gradient($color, darken($color, 10%)));
