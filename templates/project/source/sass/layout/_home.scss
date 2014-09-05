@@ -82,9 +82,7 @@ body {
 %block-inner {
 	padding: 15px;
 }
-// #F4F2E4
-// #E6E2CF
-// #D3CEB2
+
 // 檢索功能
 .search-utility {
 	.tab-content {
@@ -249,11 +247,20 @@ body {
 
 	.hot__list {
 		@extend %cont-font-size;
-		@extend %cont-font-size;
-		@extend %ordered-inside;
+		@extend %reset-list;
 		@extend %zero;
+		counter-reset: list 0;
+		color: #4c290a;
 		li {
-			padding: 2px 5px;
+			&:before {
+				content: counter(list,decimal);
+				counter-increment: list;
+				position: absolute;
+				margin-left: -2em;
+				@extend %text-center;
+				width: 1.5em;
+			}
+			padding: 2px 5px 2px 2em;
 			&:nth-child(odd) {
 				@extend %table-striped--odd;
 			}
@@ -266,17 +273,15 @@ body {
 		}
 	}
 	.item {
-		width: 89%;
+		width: 100%;
 		@extend %is-show-inline;
 		@extend %list-inline;
 		dt{
-			@include size(70% 100%);
+			@include size(75% auto);
 		}
 		dd{
 			@extend %fr;
 			@extend %text-right;
-			@include size(20% 100%);
-			margin-left: 5%;
 		}
 	}
 }
