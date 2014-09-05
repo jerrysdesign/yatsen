@@ -34,8 +34,8 @@
 
 $(function() {
 
-	$(".search-tab > ul").tabs(".tabs_item");
-	$(".hot__tab").tabs(".tabs_item");
+	$(".search-tab > ul").tabs(".search-utility .tabs_item");
+	$(".hot__tab").tabs(".hot .tabs_item");
 
 	$(".vertical").scrollable({
 		vertical:true,
