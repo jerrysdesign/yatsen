@@ -18,7 +18,7 @@ $mainNavColor: #f2ebb0;
 	}
 }
 .top-nav {
-	font-size: .85em;
+	@extend %cont-font-size;
 	@extend %navbar-right;
 	@extend %breadcrumbs;
 	@extend %breadcrumbs-sections;
@@ -27,5 +27,16 @@ $mainNavColor: #f2ebb0;
 	}
 	a {
 		color: $black-80;
+	}
+}
+.breadcrumbs {
+	@extend %cont-font-size;
+	@extend %breadcrumbs;
+	margin-top: 10px;
+	li + li:before {
+		color: $red;
+	}
+	a {
+		color: $red;
 	}
 }

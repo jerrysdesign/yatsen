@@ -534,7 +534,7 @@
 
 @mixin list-inline {
 	@include zero;
-	li, dt, dd {
+	>li, dt, >dd {
 		@include inline-block;
 	}
 }
@@ -542,7 +542,15 @@
 @mixin reset-list-inline {
 	@include zero;
 	@include reset-list-style;
-	li, dt, dd {
+	>li, dt, dd {
 		display: inline-block;
+	}
+}
+
+@mixin is-show-inle-block {
+	vertical-align: middle;
+	> div, >li, dd, dt {
+		vertical-align: middle;
+		@include is-show-inline;
 	}
 }

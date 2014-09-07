@@ -1,5 +1,6 @@
 // =Forms
 // -----------------------------------------------------------------------------
+
 %forms {
     label {
         display: block;
@@ -46,7 +47,7 @@
     input[type="datetime-local"],
     textarea,
     select {
-        display: inline-block;
+        @extend %is-show-inline;
     }
 
     @extend %zero;
@@ -76,7 +77,7 @@
 }
 
 %forms-inline-list-li {
-    display: inline-block;
+    @extend %is-show-inline;
     margin-bottom: 0;
 }
 

@@ -16,6 +16,8 @@ $page-container: ".container";
 .main-nav { @extend .container;}
 .main { @extend .container;}
 .footer { @extend .container;}
+.breadcrumbs  { @extend .container;}
+
 .area {
 	//@include span-columns(13, 17);
 	width: 780px;

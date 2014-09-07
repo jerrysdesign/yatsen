@@ -1,178 +1,119 @@
-doctype html
-| <!--[if lt IE 7]>	<html class="no-js lt-ie9 lt-ie8 lt-ie7">	<![endif]-->
-| <!--[if IE 7]>	<html class="no-js lt-ie9 lt-ie8">			<![endif]-->
-| <!--[if IE 8]>	<html class="no-js lt-ie9">					<![endif]-->
-| <!--[if gt IE 8]>	<!-->
-html.no-js lang="zh-tw"
-	| <!--<![endif]-->
-	head
-		meta charset="utf-8"
-		meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" 
-		title 中山學術資料庫
-		meta name="description" content=""
-		meta name="viewport" content="width=device-width, initial-scale=1"
-		link rel="stylesheet" href="css/style.css"
-		script src="js/vendor/modernizr-2.7.2.min.js"
-	body
-		/[if lt IE 9]
-			p.browsehappy
-				| 您使用的瀏覽器
-				strong 過於老舊
-				| ，請
-				a href="http://browsehappy.com/" 請更新您的瀏覽器
-				| ，以維持正常瀏覽與體驗。
-		
-		.container.bg
-			.header
-				.logo.logo1
-				.top-nav
-					ul
-						li: a href="javascript:;" 一般民眾版
-						li.active: a href="javascript:;" 學術研究版
-						li: a href="javascript:;" 回首頁
-			.main-nav
+= render "partials/layout-header"
+= render "partials/layout-main-nav"
+.main.home
+	.area
+		.block-a.search-utility
+			.search-tab
 				ul
-					li: a href="javascript:;" 網站簡介
-					li: a href="javascript:;" 資料庫查詢
-					li: a href="javascript:;" 電子書瀏覽
-					li: a href="javascript:;" 互動地圖
-					li: a href="javascript:;" 年代大世紀
-					li: a href="javascript:;" 主題館
-					li: a href="javascript:;" 熱門排行
-					li: a href="javascript:;" 相關連結
-					li: a href="javascript:;" 個人化服務
-			.main.home
-				.area
-					.block-a.search-utility
-						.search-tab
-							ul
-								li: a href="javascript:;" 簡易檢索
-								li: a href="javascript:;" 進階檢索
-						form.tab-content
-							ul
-								/ 簡易檢索
-								li.tabs_item.search-utility--seach
-									ul.search-row
-										li
-											input type="text"
-										li
-											select
-												option 不限欄位
-												option select1
-												option select2
-										li
-											a.search-utility__btn--search href="javascript:;" 搜尋
-									.clearfix
-									lebel
-										| 資料類型: 
-										ul.search-row
-											- (1..5).each do |n|
-												li
-													input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
-													label for="checkbox-#{n}"Check #{n}
-									.clearfix
-									lebel
-										| 熱門檢索詞: 
-										ul.search-row
-											-5.times do
-												li: a href="javascript:;" =zh_lorem_words 5 
-
-								/ 進階檢索
-								li.tabs_item.search-utility--adv-seach
-									p =zh_lorem_paragraph				
-					.block-b
-						h2.block__title 【分類瀏覽】
-						ul.block-b__browse
-							li: a.item.item-1 href="javascript:;" 國管紀要
-							li: a.item.item-2 href="javascript:;" 孫文專書
-							li: a.item.item-3 href="javascript:;" 孫文論文
-							li: a.item.item-4 href="javascript:;" 孫學期刊
-							li: a.item.item-5 href="javascript:;" 國父年譜
-							li: a.item.item-6 href="javascript:;" 國父全集
-					.block-c
-						.block-c__1.interactive-map
-							h2.block__title 【互動地圖】
-							.subheading 跟著國父的足跡走遍天下
-							a href="javascript:;" = image_tag(lorem_image("230x200"))
-
-						.block-c__2.historical-anniversaries
-							h2.block__title 【歷史上的今天】
-							dl.historical-anniversaries__list
-								-4.times do
-									dt.historical-anniversaries__list--date =lorem_date("%Y.%m.%d", 2010..2025)
-									dd: a href="javascript:;" =zh_lorem_sentence
-							a.fr.small href="javascript:;" 【看更多】
-						.block-c__3.hot
-							ul.hot__tab
-								li: a href="javascript:;" 熱門點閱
-								li: a href="javascript:;" 熱門收藏
-								li: a href="javascript:;" 熱門推薦
-							ul.hot__head
-								li 名次
-								li 題名
-								li.text-right 次數
-							.tab-content
-								-3.times do
-									.tabs_item
-										ol.hot__list
-											-8.times do
-												/ 名次
-												li
-													dl.item
-														/ 題名
-														dt: a href="javascript:;" =zh_lorem_words 10 
-														/ 次數
-														dd 999
-				.side--right
-					.block-d.time-line
-						h2.block__title 國父大事年表
-						a.scroll-top.prev href="javascript:;" TOP
-						.vertical
-							ul.items
+					li: a href="javascript:;" 簡易檢索
+					li: a href="javascript:;" 進階檢索
+			form.tab-content
+				ul
+					/ 簡易檢索
+					li.tabs-item.search-utility--seach
+						ul.search-row
+							li
+								input type="text"
+							li
+								select
+									option 不限欄位
+									option select1
+									option select2
+							li
+								a.search-utility__btn--search href="javascript:;" 搜尋
+						.clearfix
+						lebel
+							| 資料類型: 
+							ul.search-row
+								- (1..5).each do |n|
+									li
+										input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
+										label for="checkbox-#{n}"Check #{n}
+						.clearfix
+						lebel
+							| 熱門檢索詞: 
+							ul.search-row
 								-5.times do
-									li.time-line__item
-										.item__head
-											/ 歲
-											span.age 99
-											/ 年份
-											span.yy 民國xx年（1999）
-										.item__photo
-											= image_tag(lorem_image("156x123"))
-											p =zh_lorem_sentence
-										ul.item__list
-											li =zh_lorem_sentence
-											li =zh_lorem_sentence
-								-5.times do
-									li.time-line__item
-										.item__head
-											/ 歲
-											span.age 99
-											/ 年份
-											span.yy 民國xx年（1999）
-										.item__photo
-											= image_tag(lorem_image("156x123"))
-											p =zh_lorem_sentence
-										ul.item__list
-											li =zh_lorem_sentence
-											li =zh_lorem_sentence
-						a.scroll-down.next href="javascript:;" DOWN
-			.footer
-				.logo0
-				.copyright
-					| 國立國父紀念館地址:11073臺北市信義區仁愛路4段505號 電話:(02)2758-8008
-					br
-					| 國立國父紀念館 版權所有 All Rights Reserved. 本館E-mail: 
-					a href="mailto:sun@yatsen.gov.tw" sun@yatsen.gov.tw
-					br
+									li: a href="javascript:;" =zh_lorem_words 5 
 
-		script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" 
-		| <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-		script src="js/vendor/jquery-migrate-git.min.js"
-		script src="js/vendor/jquery.tools.min.js"
-		script src="js/script.js"
-		/[if lt IE 9]
-			javascript:
-				$(function(){
-					var _def = $('.hot__list li:odd');
-					$(this).striped(_def);
-				});
+					/ 進階檢索
+					li.tabs-item.search-utility--adv-seach
+						p =zh_lorem_paragraph				
+		.block-b
+			h2.block__title 【分類瀏覽】
+			ul.block-b__browse
+				li: a.item.item-1 href="javascript:;" 國管紀要
+				li: a.item.item-2 href="javascript:;" 孫文專書
+				li: a.item.item-3 href="javascript:;" 孫文論文
+				li: a.item.item-4 href="javascript:;" 孫學期刊
+				li: a.item.item-5 href="javascript:;" 國父年譜
+				li: a.item.item-6 href="javascript:;" 國父全集
+		.block-c
+			.block-c__1.interactive-map
+				h2.block__title 【互動地圖】
+				.subheading 跟著國父的足跡走遍天下
+				a href="javascript:;" = image_tag(lorem_image("230x200"))
+
+			.block-c__2.historical-anniversaries
+				h2.block__title 【歷史上的今天】
+				dl.historical-anniversaries__list
+					-4.times do
+						dt.historical-anniversaries__list--date =lorem_date("%Y.%m.%d", 2010..2025)
+						dd: a href="javascript:;" =zh_lorem_sentence
+				a.fr.small href="javascript:;" 【看更多】
+			.block-c__3.hot
+				ul.hot__tab
+					li: a href="javascript:;" 熱門點閱
+					li: a href="javascript:;" 熱門收藏
+					li: a href="javascript:;" 熱門推薦
+				ul.hot__head
+					li 名次
+					li 題名
+					li.text-right 次數
+				.tab-content
+					-3.times do
+						.tabs-item
+							ol.hot__list
+								-8.times do
+									/ 名次
+									li
+										dl.item
+											/ 題名
+											dt: a href="javascript:;" =zh_lorem_words 10 
+											/ 次數
+											dd 999
+	.side--right
+		.block-d.time-line
+			h2.block__title 國父大事年表
+			a.scroll-top.prev href="javascript:;" TOP
+			.vertical
+				ul.items
+					-5.times do
+						li.time-line__item
+							.item__head
+								/ 歲
+								span.age 99
+								/ 年份
+								span.yy 民國xx年（1999）
+							.item__photo
+								= image_tag(lorem_image("156x123"))
+								p =zh_lorem_sentence
+							ul.item__list
+								li =zh_lorem_sentence
+								li =zh_lorem_sentence
+					-5.times do
+						li.time-line__item
+							.item__head
+								/ 歲
+								span.age 99
+								/ 年份
+								span.yy 民國xx年（1999）
+							.item__photo
+								= image_tag(lorem_image("156x123"))
+								p =zh_lorem_sentence
+							ul.item__list
+								li =zh_lorem_sentence
+								li =zh_lorem_sentence
+			a.scroll-down.next href="javascript:;" DOWN
+
+=render "partials/layout-foot"

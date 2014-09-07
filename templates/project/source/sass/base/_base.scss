@@ -11,9 +11,9 @@ $rhythm-unit:		em;
 
 
 
-/* ===========================
-   Global Defaults
-   =========================== */
+// ===========================
+//   Global Defaults
+// ===========================
 
 
 // Vanilla CSS
@@ -50,13 +50,13 @@ a {
 // HEADINGS
 // -------------------------
 
-///* All Headings */
+//// All Headings
 // h1, h2, h3, h4, h5, h6 {}
 // #{headings()} {
 // 	@include reset-box-model;
 // }
 
-/* Individual Headings */
+// Individual Headings
 h1 {}
 h2 {}
 h3 {}
@@ -68,18 +68,18 @@ h6 {}
 // PARAGRAPHS
 // -------------------------
 
-/* First Paragraph */
+// First Paragraph
 p { @extend %reset-box-model; }
 
-/* Seccond Paragraph */
+// Seccond Paragraph
 abbr {}
 b {}
 
-/* Blockquote */
+// Blockquote
 blockquote {}
 cite {}
 
-/* Third Paragraph */
+// Third Paragraph
 dfn {}
 del {}
 em {}
@@ -88,29 +88,29 @@ strong {}
 ins {}
 small {}
 
-/* Quote */
+// Quote
 q {}
 
-/* Fourth Paragraph */
+// Fourth Paragraph
 sub {}
 sup {}
 
 // LISTS
 // -------------------------
 
-/* All Lists */
+// All Lists
 dl, ol, ul {}
 
-/* Definition Lists */
+// Definition Lists
 dl {}
 dt {}
 dd {}
 
-/* Ordered Lists */
+// Ordered Lists
 ol {}
 ol li {}
 
-/* Unordered Lists */
+// Unordered Lists
 ul {}
 ul li {}
 
@@ -122,32 +122,38 @@ fieldset {}
 legend {}
 label {}
 
-/* Inputs */
+// Inputs
 input {}
 textarea {}
 
-/* Other */
+// Other
 select {}
 optgroup {}
 
 // TABLES
 // -------------------------
 
-table {}
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 caption {}
 tr {}
 
-/* Head */
+// Head
 thead {}
 th {}
 
-/* Body */
+// Body
 tbody {}
 td {}
 
-/* Foot */
+// Foot
 tfoot {}
 
+th,
+td {
+  border-bottom: 1px solid #eee;
+  padding: 8px 10px; }
 // OTHER
 // -------------------------
 
