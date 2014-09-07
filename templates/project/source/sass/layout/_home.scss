@@ -249,7 +249,7 @@ $paginationLinkColor: #7a99d9;
 		@for $i from 0 through 6 {
 			.item.item-#{$i} {
 				// 7.8em*16=124.8 => 125px
-				background-position-x: 125px*$i;
+				background-position: 125px*$i top;
 			}
 		}
 	}
