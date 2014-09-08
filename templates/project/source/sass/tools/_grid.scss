@@ -3,16 +3,22 @@
 // ----------------------
 
 // @import "susy"; // Requires Susy 2.0.0 or later
-// 
 // $susy: (
-//     columns: 12,
-//     column-width: 4em,
-//     gutters: 1/3,
-//     show-grids: show-columns,
-//     box-sizing: border-box
+// 	columns: 17,
+// 	column-width: 2.5em,
+// 	gutters: 1.25em,
+// 	show-grids: show-columns,
+// 	box-sizing: border-box
 // );
 
-@import "susy";
+// 以下千萬不要動
+// 這是拿來設compass跟susy
+// $baseFontSize	: 16px;
+// $baseLineHeight	: 24px;
+// 以上千萬不要動
+
+// @import "susyone";
+@import "vendor/susy";
 
 $total-columns  : 17;
 $column-width   : 40px;

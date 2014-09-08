@@ -11,7 +11,7 @@ $page-container: ".container";
 
 /* ======================= Layout styles ======================= */
 
-.container { @extend .container;}
+.container {@include container(17);}
 .header { @extend .container;}
 .main-nav { @extend .container;}
 .main { @extend .container;}
