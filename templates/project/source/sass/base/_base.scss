@@ -1,20 +1,6 @@
-// Compass Settings
-// ========================
-
-@import "compass/typography";
-
-$base-font-size:	$baseFontSize;
-$base-line-height:	$baseLineHeight;
-@include establish-baseline();
-// $round-to-nearest-half-line: true;
-$rhythm-unit:		em;
-
-
-
-// ===========================
-//   Global Defaults
-// ===========================
-
+/* ==========================================================================
+   Global Defaults
+   ========================================================================== */
 
 // Vanilla CSS
 // http://www.vanillacss.com/
@@ -22,7 +8,11 @@ $rhythm-unit:		em;
 
 // BODY ELEMENTS
 // -------------------------
-
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
 body {
 	//@include adjust-font-size-to(13px);
 	font-family:	$baseFontFamily;
@@ -30,7 +20,6 @@ body {
 	color:			$baseFontColor;
 	background:		$baseBackground;
 
-	-webkit-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 }
@@ -69,7 +58,7 @@ h6 {}
 // -------------------------
 
 // First Paragraph
-p { @extend %reset-box-model; }
+p { @include reset-box-model; }
 
 // Seccond Paragraph
 abbr {}
@@ -125,7 +114,23 @@ label {}
 // Inputs
 input {}
 textarea {}
-
+input[type=button],
+input[type=submit],
+button {
+	cursor: pointer;
+}
+input[type="radio"],
+input[type="checkbox"] {
+	font-size: 110%;
+	position: relative;
+	top: -1px;
+}
+input[type="search"] {
+	-webkit-appearance: textfield;
+}
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
 // Other
 select {}
 optgroup {}

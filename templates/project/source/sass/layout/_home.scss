@@ -28,6 +28,7 @@
 }
 // 無敵雙背景
 body {
+	background: url('#{$imagesPath}/bg0.png');
 	@extend %double-bg;
 	&:before {
 		content: '';
@@ -46,15 +47,28 @@ body {
 %block {
 	margin-top: 20px;
 }
+%block-inner-15 {
+	padding: 15px;
+}
+%block-inner-10 {
+	padding: 10px;
+}
 .search-utility {
 	@extend %block;
+}
+%cont-font-size {
+	@include adjust-font-size-to(13px);
+	font-size: 13px;
+}
+%control-font-size {
+	@extend %cont-font-size;
 }
 
 .block-b {
 	@include size(780px 196px);
 	background-image: url('#{$imagesPath}/bg3.png');
 	@extend %block;
-	@extend %block-inner
+	@extend %block-inner-15
 }
 .block-c {
 	@include size(780px 330px);
@@ -62,7 +76,7 @@ body {
 	@extend %block;
 	.interactive-map,.block-c__2,.block-c__3 {
 		width: 33.333%;
-		@extend %block-inner;
+		@extend %block-inner-15;
 		@extend %fl;
 	}
 }
@@ -79,21 +93,17 @@ body {
 	margin-bottom: .5em;
 	font-weight: bold;
 }
-%block-inner {
-	padding: 15px;
-}
 
 // 檢索功能
 .search-utility {
 	.tab-content {
 		font-size: .83333em;
 		background-image: url('#{$imagesPath}/bg2.png');
-		background-color: #fff;
 		ul {@extend  %reset-list;}
 	}
 	.search-utility--seach {
 		@include size(780px 120px);
-		@extend %block-inner;
+		@extend %block-inner-15;
 	}
 	.search-row {
 		@extend %reset-list;
@@ -126,11 +136,11 @@ body {
 	}
 }
 %btn-color1 {
-	@extend %cont-font-size;
+	@extend %control-font-size;
     @include btn($color1,$color1);
 }
 %btn-color-df {
-	@extend %cont-font-size;
+	@extend %control-font-size;
     @include btn($black-0,$black-5);
     border:1px solid $black-30;
     color:black;
@@ -147,19 +157,17 @@ body {
 }
 
 // 簡易檢索
-.search-page {
-	.tab-content {
+.tab-content {
+	.search-utility & {
 		background: #fff;
-		padding: 10px;
+	}
+	.search-page & {
+		@extend %block-inner-10;
 	}
 }
+
 .search-list {
 	margin-top: 10px;
-	.page-control-bar {
-		margin: 1px 0;
-		padding: 7px 10px;
-		background-color: $black-10;
-	}
 	.search-list__title {background-color: $black-20;}
 	thead {
 		th {
@@ -181,43 +189,6 @@ body {
 	}
 }
 
-$paginationLinkColor: #7a99d9;
-.pagination {
-	@extend %pagination;
-	li {
-		height: 20px;
-		a, span {
-			padding: 3px 6px;
-			@include size(20px);
-		}
-		a {
-			&:hover {
-				background: $paginationLinkColor;
-			}
-		}
-		span {
-			background: $paginationLinkColor;
-			color: #fff;
-		}
-	}
-}
-
-.page-control-bar {
-	@extend %is-show-inle-block;
-	.col1 {
-		margin-right: 55px;
-	}
-	.col2 {
-		margin-right: 55px;
-	}
-	.col3 {
-	}
-	.col4 {
-		@extend text-right;
-		@extend %fr;
-	}
-}
-
 // color
 .tabs-item {
 	display: none;
@@ -229,6 +200,13 @@ $paginationLinkColor: #7a99d9;
 	color: $colorPumpkin
 };
 
+// 詳目
+.content {
+	@extend %block-inner-10;
+	@extend %block;
+	background-color: #fff;
+}
+ 
 
 // 分類瀏覽
 @include with-grid-settings(6,7.8em,0em,0) {
@@ -255,9 +233,7 @@ $paginationLinkColor: #7a99d9;
 	}
 }
 
-%cont-font-size {
-	@include adjust-font-size-to(13px);
-}
+
 
 // 互動地圖
 .interactive-map {
@@ -296,7 +272,7 @@ $paginationLinkColor: #7a99d9;
 			padding-bottom: 4px;
 			color: black;
 			@extend %text-center;
-			@extend .bold;
+			@extend %bold;
 			&:hover {
 				background: url('#{$imagesPath}/tabhover.png');
 			}
@@ -351,7 +327,7 @@ $paginationLinkColor: #7a99d9;
 
 // 大事年表
 .time-line {
-	@extend %block-inner;
+	@extend %block-inner-15;
 	.vertical {
 		position:relative;
 		overflow:hidden;
@@ -384,8 +360,9 @@ $paginationLinkColor: #7a99d9;
 		.age {
 			@extend %time-line__head;
 			font-size: 36px;
-			@extend bold;
-			top: 10px;
+			line-height: 36px;
+			top: 4px;
+			@extend %bold;
 		}
 
 		.yy {
@@ -423,4 +400,41 @@ $paginationLinkColor: #7a99d9;
 %time-line__head {
 	position: absolute;
 	color:$colorPumpkin;
+}
+
+.related {
+	@extend %block;
+	@extend %block-inner-15;
+	background-color: #fff;
+	@extend %nav;
+	.related-title {
+		background-color: $black-10;
+		color: #c04d01;
+		padding-left: 5px;
+		@extend %cont-font-size;
+		@extend %bold;
+	}
+	.more {
+		background-color: $black-20;
+		color: #c04d01;
+		@extend %fr;
+		padding: 0 .25em;
+	}
+	.related-list {
+		margin-bottom: 10px;
+		li {
+			@extend %cont-font-size;
+			padding-left: 5px;
+			a {
+				padding: 0;
+			}
+		}
+		& + .related-title {
+			margin-top: 10px;
+		}
+	}
+	ol {
+		list-style-type: decimal;
+		list-style-position: inside;
+	}
 }

@@ -1,26 +1,36 @@
+@charset "UTF-8";
+//-----------------------------------------------------
+// 
+//-----------------------------------------------------
+
+// SMACSS 建議規則
+
+// Base
+// Layout
+// Module
+// Partial
+// State
+// Theme
+
+
+// 0
 // Req
 @import "compass";
 
-// Tools
-@import "tools";
-
+// 1
 // Base styles
 @import "base";
 
-// Fonts
-// @import "fonts/...";
-
-// helpers styles
-@import "tools/helpers";
-
+// 2
 // Module Styles
 @import "modules";
 
+// 3
 // Layout styles
 @import "layouts";
 	
 // JS-based classes
-@import "states";
+// @import "states";
 
 // Vendor classes
 
