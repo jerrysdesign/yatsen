@@ -3,6 +3,7 @@ $(function() {
 	$(".search-tab > ul").tabs(".search-utility .tabs-item");
 	$(".hot__tab").tabs(".hot .tabs-item");
 	$(".function-tab").tabs(".function-utility .tabs-item");
+	$(".search__tab").tabs(".searchs .tabs-item");
 
 	$(".vertical").scrollable({
 		vertical:true,

@@ -189,6 +189,28 @@ body {
 	}
 }
 
+// 簡易檢索側欄
+.searchs {
+	@extend %block;
+	.related {margin: 0;}
+	.search__tab {
+		@extend %navbar;
+		li {width: 33.3%;}
+		a {
+			background-color: #E6E2CF;
+			@include background-image(linear-gradient(#F4F2E4, #D3CEB2));
+			font-size: 14px;
+			@extend %text-center;
+			padding: 0.3em 0;
+			&.current {
+				color: #c04d01;
+				background-color: #FFF;
+				@include background-image(linear-gradient(#FFF, #FFF));
+			}
+		}
+	}
+}
+
 // color
 .tabs-item {
 	display: none;
