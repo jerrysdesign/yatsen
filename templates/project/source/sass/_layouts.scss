@@ -6,7 +6,7 @@ $page-container: ".container";
 
 #{$page-container} {
   @include container(17);
-  @include susy-grid-background;
+  // @include susy-grid-background;
 }
 
 /* ======================= Layout styles ======================= */

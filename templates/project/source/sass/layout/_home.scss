@@ -109,9 +109,13 @@ body {
 		@extend %reset-list;
 		@extend %forms-inline-list;
 		@extend %is-show-inline;
+		width: 100%;
 	}
 	.group + .group{
 		margin-left: 2em;
+	}
+	input+a{
+		margin-top: -3px; //only chrome
 	}
 	.clearfix {margin:4px 0;}
 }
@@ -137,13 +141,17 @@ body {
 }
 %btn-color1 {
 	@extend %control-font-size;
-    @include btn($color1,$color1);
+    @include btn($btnColor1,$btnColor1);
+}
+%btn-color2 {
+	@extend %control-font-size;
+    @include btn($btnColor2,$btnColor2);
 }
 %btn-color-df {
 	@extend %control-font-size;
     @include btn($black-0,$black-5);
     border:1px solid $black-30;
-    color:black;
+    color: black;
 }
 
 .search-utility__btn--search {
@@ -154,6 +162,12 @@ body {
 	&:hover {
 		color:black;
 	}
+}
+.btn--back {
+	@extend %btn-color1;
+}
+.btn--green {
+	@extend %btn-color2;
 }
 
 // 簡易檢索
