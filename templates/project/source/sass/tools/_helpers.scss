@@ -209,6 +209,10 @@
 	@include clearfix;
 }
 
+.full, %full {
+	@include full;
+}
+
 // Center block
 %center-block, .center-block {
 	@include center-block;
