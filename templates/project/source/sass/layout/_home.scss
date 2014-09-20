@@ -98,18 +98,22 @@ body {
 .search-utility {
 	.tab-content {
 		font-size: .83333em;
-		background-image: url('#{$imagesPath}/bg2.png');
+		background-repeat: no-repeat;
 		ul {@extend  %reset-list;}
 	}
-	.search-utility--seach {
-		@include size(780px 120px);
+	%tab-item {
+		width: 780px;
+		background-image: url('#{$imagesPath}/bg2.png');
+		background-color: #FFF;
 		@extend %block-inner-15;
+		min-height: 120px;
 	}
+	.search-utility--seach { @extend %tab-item}
+	.search-utility--adv-seach { @extend %tab-item}
 	.search-row {
 		@extend %reset-list;
 		@extend %forms-inline-list;
 		@extend %is-show-inline;
-		width: 100%;
 	}
 	.group + .group{
 		margin-left: 2em;
@@ -172,11 +176,9 @@ body {
 
 // 簡易檢索
 .tab-content {
-	.search-utility & {
-		background: #fff;
-	}
 	.search-page & {
 		@extend %block-inner-10;
+		background: #fff;
 	}
 }
 
