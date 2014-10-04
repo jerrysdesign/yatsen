@@ -115,6 +115,9 @@ body {
 		background-repeat: no-repeat;
 		ul {@extend  %reset-list;}
 	}
+	.tabs-item {
+		@extend %block-inner-15;
+	}
 	.search-utility--seach { background-color: #FFF;}
 	.search-utility--adv-seach {background-color: #FFF;}
 	.search-row {
@@ -130,16 +133,15 @@ body {
 	}
 	.clearfix {margin:4px 0;}
 }
-%tab-item {
-	width: 780px;
-	background-image: url('#{$imagesPath}/bg2.png');
-	background-color: #FFF;
-	@extend %block-inner-15;
-	min-height: 120px;
-}
+
 .block-a {
-	.search-utility--seach { @extend %tab-item;}
-	.search-utility--adv-seach { @extend %tab-item;}
+	.search-utility--seach, .search-utility--adv-seach { 
+		width: 780px;
+		background-image: url('#{$imagesPath}/bg2.png');
+		background-color: #FFF;
+		min-height: 120px;
+		@extend %block-inner-15;
+	}
 }
 .search-tab {
 	@extend %navbar;

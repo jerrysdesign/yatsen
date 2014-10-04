@@ -25,25 +25,48 @@
 					li.tabs-item.search-utility--seach
 						ul.search-row
 							li
-
+								input type="text"
 							li
-
-							li
-
+								a.search-utility__btn--search href="javascript:;" 搜尋
 						.clearfix
 						lebel
 							| 資料類型: 
 							ul.search-row
-								- (1..5).each do |n|
+								- (1..4).each do |n|
 									li
 										input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
 										label for="checkbox-#{n}"Check #{n}
 						.clearfix
 						lebel
-							| 熱門檢索詞: 
+							| 查詢日期: 
 							ul.search-row
-								-5.times do
-									li: a href="javascript:;" =zh_lorem_words 5 
+								li
+									select
+										option 民國前46年（1866）
+									select
+										option 1
+									| 月	
+									select
+										option 1
+									| 日 ~ 
+									select
+										option 民國前46年（1866）
+									select
+										option 1
+									| 月	
+									select
+										option 1
+									| 日
+						.clearfix
+						lebel
+							| 選擇文件類型: 
+							ul.search-row
+								- (1..20).each do |n|
+									li style="width:19%"
+										input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
+										label for="checkbox-#{n}"Check #{n}
+
+
 
 					/ 進階檢索
 					li.tabs-item.search-utility--adv-seach
