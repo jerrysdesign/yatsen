@@ -42,21 +42,33 @@
 							ul.search-row
 								li
 									select
-										option 民國前46年（1866）
+										option
+											| 民國前
+											=rand(99)
+											| 年（
+											=rand(9999)
+											| ）
+
 									select
-										option 1
+										option =rand(12)
 									| 月	
 									select
-										option 1
+										option =rand(30)
 									| 日 ~ 
 									select
-										option 民國前46年（1866）
+										option
+											| 民國前
+											=rand(99)
+											| 年（
+											=rand(9999)
+											| ）
 									select
-										option 1
+										option =rand(12)
 									| 月	
 									select
-										option 1
+										option =rand(30)
 									| 日
+
 						.clearfix
 						lebel
 							| 選擇文件類型: 
