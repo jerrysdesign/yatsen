@@ -30,16 +30,29 @@
 body {
 	background: url('#{$imagesPath}/bg0.png');
 	@extend %double-bg;
+	&.home-bg {
+		&:before {
+			content: '';
+			background: url('#{$imagesPath}/bg1.png') no-repeat center top;
+		}
+	}
 	&:before {
 		content: '';
-		background: url('#{$imagesPath}/bg1.png') no-repeat center top;
+		background: url('#{$imagesPath}/sb-bg-1.png') no-repeat center top;
 	}
 	border-bottom: 6px solid #5f751e;
 }
-.bg {
+%body-bg {
 	@extend .container;
 	min-height: 410px;
+}
+.home-bg > .container {
+	@extend %body-bg;
 	background: url('#{$imagesPath}/bg1.png') no-repeat center top;
+}
+.sub-bg > .container{
+	@extend %body-bg;
+	background: url('#{$imagesPath}/sb-bg-1.png') no-repeat center top;
 }
 
 // HOME
@@ -95,21 +108,15 @@ body {
 }
 
 // 檢索功能
+
 .search-utility {
 	.tab-content {
 		font-size: .83333em;
 		background-repeat: no-repeat;
 		ul {@extend  %reset-list;}
 	}
-	%tab-item {
-		width: 780px;
-		background-image: url('#{$imagesPath}/bg2.png');
-		background-color: #FFF;
-		@extend %block-inner-15;
-		min-height: 120px;
-	}
-	.search-utility--seach { @extend %tab-item}
-	.search-utility--adv-seach { @extend %tab-item}
+	.search-utility--seach { background-color: #FFF;}
+	.search-utility--adv-seach {background-color: #FFF;}
 	.search-row {
 		@extend %reset-list;
 		@extend %forms-inline-list;
@@ -122,6 +129,17 @@ body {
 		margin-top: -3px; //only chrome
 	}
 	.clearfix {margin:4px 0;}
+}
+%tab-item {
+	width: 780px;
+	background-image: url('#{$imagesPath}/bg2.png');
+	background-color: #FFF;
+	@extend %block-inner-15;
+	min-height: 120px;
+}
+.block-a {
+	.search-utility--seach { @extend %tab-item;}
+	.search-utility--adv-seach { @extend %tab-item;}
 }
 .search-tab {
 	@extend %navbar;
