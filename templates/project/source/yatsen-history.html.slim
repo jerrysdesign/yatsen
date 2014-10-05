@@ -53,12 +53,13 @@
 							select
 								option =rand(30)
 							| 日
-	.row
-		h2 年代瀏覽
-		ul
+	.row.history__contarea
+		h2.title
+			span 年代瀏覽
+		ul.nav__list02
 			li: a href="javascript:;" 民國 52 ~ 60 年 (1963~1971)
 			li: a href="javascript:;" 民國 61 ~ 65 年 (1972~1976)
-			li: a href="javascript:;" 民國 66 ~ 70 年 (1975~1981)
+			li: a.currnet href="javascript:;" 民國 66 ~ 70 年 (1975~1981)
 			li: a href="javascript:;" 民國 71 ~ 75 年 (1982~1986)
 			li: a href="javascript:;" 民國 76 ~ 80 年 (1987~1991)
 			li: a href="javascript:;" 民國 81 ~ 85 年 (1992~1996)
@@ -66,23 +67,36 @@
 			li: a href="javascript:;" 民國 91 ~ 95 年 (2002~2006)
 			li: a href="javascript:;" 民國 96 ~ 100 年(2007~2011)
 			li: a href="javascript:;" 民國 101 年     (2012)
+		.history__cont
+			.search-utility.search-life
+				.search-tab
+					ul
+						li: a href="javascript:;" 民國66年(1977)
+						li: a href="javascript:;" 民國67年(1978)
+						li: a href="javascript:;" 民國68年(1979)
+						li: a href="javascript:;" 民國69年(1980)
+						li: a href="javascript:;" 民國70年(1981)
+				form.tab-content
+					ul
+						li.tabs-item.search-utility--seach
+							ul.search-row
+								-7.times do
+									li
+										span.history__date
+											| ◆ 
+											=rand(12)
+											| 月	
+											=rand(30)
+											| 日
+										span =zh_lorem_sentence
+										img src="/img/picture.png" /
+										img src="/img/photos.png" /
+								.history__pic
+									-4.times do
+										= image_tag (lorem_image("140x95&text=[img]"))
+						/ 其它年代頁籤
+						-4.times do
+							li.tabs-item.search-utility--adv-seach
+								p =zh_lorem_paragraph
 
-		ul
-			li 民國66年(1977)
-			li 民國67年(1978)
-			li 民國68年(1979)
-			li 民國69年(1980)
-			li 民國70年(1981)
-		ul
-			-7.times do
-				li
-					span
-						| ◆ 
-						=rand(12)
-						| 月	
-						=rand(30)
-						| 日
-					span =zh_lorem_sentence
-			-4.times do
-				= image_tag (lorem_image("140x95&text=[img]"))
 =render "partials/layout-foot"

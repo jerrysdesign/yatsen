@@ -556,8 +556,8 @@ body {
 	}
 }
 
-// 國父年譜
-.life__contarea {
+// 國父年譜 & 國館紀要
+.life__contarea,.history__contarea {
 	h2.title {
 		margin: 20px 0 10px 0;
 		background: url('#{$imagesPath}/head-title-bg.png');
@@ -576,19 +576,31 @@ body {
 			}
 		}
 	}
-	.nav__list01 {
+	.nav__list01, .nav__list02 {
 		float: left;
 		width: 280px;
 		li {
 			font-size: 15px;
-			padding-left:26px;
+			line-height: 24px;
 			background: url('#{$imagesPath}/nav_list_01.png') no-repeat 8px 50%;
+			a {
+				padding-left:26px;
+				display: block;
+			}
 			&:hover a, a.currnet {
 				color: #0156a5;
 				font-weight: bold;
 			}
 		}
 	}
+	.nav__list02 {
+		li {
+			background: url('#{$imagesPath}/list.png') no-repeat 0 50%;
+			&:hover a, a.currnet {
+				background: url('#{$imagesPath}/list_o.png') no-repeat 0 50%;
+			}
+		}
+	}	
 	.life__cont {
 		float: right;
 		width: 720px;
@@ -618,6 +630,38 @@ body {
 				border: 1px solid #b0c4d8;
 				background-color: #e7f3ff;
 				@include background-image(linear-gradient(#ffffff, #e7f3ff));
+			}
+		}
+	}
+	.history__cont {
+		float: right;
+		width: 720px;
+		.search-tab {
+			li {
+				width: 122px;
+			}
+			a {
+				padding: 0 0.2em;
+			}
+		}
+		.search-row {
+			li {
+				width: 100%;
+				img {
+					margin-left: 5px;
+					vertical-align: bottom;
+				}
+			}
+			.history__date{
+				float: left;
+				width: 84px;
+				color: #1c4cb2;
+			}
+			.history__pic{
+				margin-top: 10px;
+				img {
+					margin-right: 25px;
+				}
 			}
 		}
 	}
