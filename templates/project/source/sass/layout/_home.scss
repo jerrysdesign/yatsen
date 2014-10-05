@@ -388,7 +388,7 @@ body {
 }
 
 // 大事年表
-.time-line {
+.time-line2 {
 	@extend %block-inner-15;
 	.vertical {
 		position:relative;
@@ -664,5 +664,51 @@ body {
 				}
 			}
 		}
+	}
+}
+
+%scroll-btn2 {
+	width: 25px;
+	height: 181px;
+	position: absolute;
+	z-index: 9;
+	text-indent: -99999px;
+}
+
+// time-line2
+.time-line2 {
+	position: relative;
+	@extend %block-inner-15;
+	.scrollable {
+		position:relative;
+		overflow:hidden;
+		height: 181px;
+		width: 100%;
+	}
+	.items {
+		position:absolute;
+
+		li {
+			float: left;
+			width: 170px;
+			margin-left:20px;
+			font-size: 13px;
+			.item__list {
+				height: 50px;
+				line-height: 17px;
+			}
+		}
+	}
+	.scroll_prev {
+		@extend %scroll-btn2;
+		left: 0;
+		background-image: url('#{$imagesPath}/scroll-prev.png');
+
+	}
+	.scroll_next {
+		@extend %scroll-btn2;
+		top: 14px;
+		right: 0;
+		background-image: url('#{$imagesPath}/scroll-next.png');
 	}
 }

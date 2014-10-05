@@ -53,14 +53,14 @@
 							select
 								option =rand(30)
 							| 日
-	.row.time-line
-		a.scroll-top.prev href="javascript:;" prev
-		.vertical
+	.row.time-line2
+		a.scroll_prev.prev href="javascript:;" prev
+		.scrollable
 			ul.items
 				- 8.times do
 					li.time-line__item
 						= image_tag(lorem_image("170x126"))
-						p
+						.item__list
 							| 民國
 							=rand(105)
 							| 年
@@ -68,8 +68,8 @@
 							| 月
 							=rand(31)
 							| 日
-						br =zh_lorem_sentence
-		a.scroll-down.next href="javascript:;" next
+							br =zh_lorem_sentence
+		a.scroll_next.next href="javascript:;" next
 
 	.row.history__contarea
 		h2.title
