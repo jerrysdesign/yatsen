@@ -4,12 +4,12 @@
 //   Documentation : http://goo.gl/kWyRmT
 //   ======================= 
 
-// 避免自動產生圖檔以致檔名變更，造成git管理混亂，故Comment sprite,如需使用再打開
-//@import "compass/utilities/sprites";
+// 再研究怎麼管理csssprite source
+@import "compass/utilities/sprites";
 // @import "icons/page-control/*.png";
 // @import "icons-2x/page-control/*.png";
-// $sprites: sprite-map("icons/*.png");
-// $sprites2x: sprite-map("icons-2x/*.png");
+$sprites: sprite-map("icons/*.png");
+$sprites2x: sprite-map("icons-2x/*.png");
 
 @mixin sprite-background($name) {
   background-position: sprite-position($sprites, $name);
