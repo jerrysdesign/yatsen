@@ -41,7 +41,10 @@ $page-container: ".container";
 	width: 200px;
 	@extend %right-col;
 }
-
+.side--left {
+	width: 200px;
+	@extend %left-col;
+}
 @import "layout/home";
 @import "layout/header";
 @import "layout/nav";
@@ -62,3 +65,15 @@ $page-container: ".container";
 .search-complate {
 	margin-top: 0;
 }
+
+//
+.yasten-history__banner {
+	.search-utility {
+		width: 630px;
+		float: right;
+	}
+	.search-utility--seach {
+		background: none;
+	}
+}
+

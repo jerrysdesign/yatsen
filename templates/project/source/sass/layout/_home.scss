@@ -506,4 +506,22 @@ body {
 	
 }
 
+// 國館紀要
+.yasten-history__banner {
+	@include size(1000px 118px);
+	background: url('#{$imagesPath}/yatsen-history-banner.png')no-repeat;
+	@extend %cont-font-size;
+	.title {
+		font-family: $fontMing;
+		font-size: 16px;
+		color: #1d3360;
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	.search-row {
+		margin-bottom: 0;//有空在整理一下
+	}
+	.search-utility {
+		margin-top: 10px;//有空在整理一下
+	}
 }

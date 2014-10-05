@@ -13,7 +13,45 @@
 				| )
 			li: a href="javascript:;" 網路書城
 .main
-	.side--left
-	.area		
+	.row.yasten-history__banner
+		.search-utility
+			.search-utility--seach
+				h2.title 檢索功能
+				ul.search-row
+					li
+						input type="text"
+					li
+						a.search-utility__btn--search href="javascript:;" 搜尋
+				.clearfix
+				lebel
+					| 查詢日期: 
+					ul.search-row
+						li
+							select
+								option
+									| 民國前
+									=rand(99)
+									| 年（
+									=rand(9999)
+									| ）
+							select
+								option =rand(12)
+							| 月	
+							select
+								option =rand(30)
+							| 日 ~ 
+							select
+								option
+									| 民國前
+									=rand(99)
+									| 年（
+									=rand(9999)
+									| ）
+							select
+								option =rand(12)
+							| 月	
+							select
+								option =rand(30)
+							| 日
 
 =render "partials/layout-foot"
