@@ -13,7 +13,80 @@
 				| )
 			li: a href="javascript:;" 網路書城
 .main
-	.side--left
-	.area		
+	.row
+		.side--left.banner-complate
+			img src="/img/banner-life.png"
+		.area
+			.search-utility.search-life
+				.search-tab
+					ul
+						li: a href="javascript:;" 簡易檢索
+						li: a href="javascript:;" 進階檢索
+				form.tab-content
+					ul
+						/ 簡易檢索
+						li.tabs-item.search-utility--seach
+							ul.search-row
+								li
+									input type="text"
+								li
+									a.search-utility__btn--search href="javascript:;" 搜尋
+							.clearfix
+							ul.search-row
+								li
+									input type="checkbox"
+									label  不限欄位
+								li
+									input type="checkbox"
+									label  題名
+							.clearfix
+							lebel
+								| 查詢日期: 
+								ul.search-row
+									li
+										select
+											option
+												| 民國前
+												=rand(99)
+												| 年（
+												=rand(9999)
+												| ）
 
+										select
+											option =rand(12)
+										| 月	
+										select
+											option =rand(30)
+										| 日 ~ 
+										select
+											option
+												| 民國前
+												=rand(99)
+												| 年（
+												=rand(9999)
+												| ）
+										select
+											option =rand(12)
+										| 月	
+										select
+											option =rand(30)
+										| 日
+
+							.clearfix
+							lebel
+								| 國父年齡: 
+								ul.search-row
+									li
+										select>
+											option
+												=rand(99)
+												| 歲 
+										| ~ 
+										select<
+											option 請選擇
+
+
+						/ 進階檢索
+						li.tabs-item.search-utility--adv-seach
+							p =zh_lorem_paragraph
 =render "partials/layout-foot"
