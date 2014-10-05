@@ -53,6 +53,24 @@
 							select
 								option =rand(30)
 							| 日
+	.row.time-line
+		a.scroll-top.prev href="javascript:;" prev
+		.vertical
+			ul.items
+				- 8.times do
+					li.time-line__item
+						= image_tag(lorem_image("170x126"))
+						p
+							| 民國
+							=rand(105)
+							| 年
+							=rand(12)
+							| 月
+							=rand(31)
+							| 日
+						br =zh_lorem_sentence
+		a.scroll-down.next href="javascript:;" next
+
 	.row.history__contarea
 		h2.title
 			span 年代瀏覽
