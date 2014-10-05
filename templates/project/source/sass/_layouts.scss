@@ -18,6 +18,9 @@ $page-container: ".container";
 .footer { @extend .container;}
 .breadcrumbs  { @extend .container;}
 
+.row {
+	@extend .container;
+}
 %left-col {
 	float: left;
 	margin-right: 20px;
