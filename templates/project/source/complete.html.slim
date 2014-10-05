@@ -86,24 +86,26 @@
 							p =zh_lorem_paragraph
 	.row
 		h2 電子書庫
-		ul.book-shelf
-			li.book.vol-1
-				a href="javascript:;" 第一冊
-				/ ul
-				/ 	li: a href="javascript:;" 國父全集序
-				/ 	li: a href="javascript:;" 三名主義
-				/ 	li: a href="javascript:;" 革命方略
-				/ 	li: a href="javascript:;" 建國方略
-				/ 	li: a href="javascript:;" 建國大綱
-			li.book.vol-2: a href="javascript:;" 第二冊
-			li.book.vol-3: a href="javascript:;" 第三冊
-			li.book.vol-4: a href="javascript:;" 第四冊
-			li.book.vol-5: a href="javascript:;" 第五冊
-			li.book.vol-6: a href="javascript:;" 第六冊
-			li.book.vol-7: a href="javascript:;" 第七冊
-			li.book.vol-8: a href="javascript:;" 第八冊
-			li.book.vol-9: a href="javascript:;" 第九冊
-			li.book.vol-10: a href="javascript:;" 第十冊
-			li.book.vol-11: a href="javascript:;" 第十一冊
-			li.book.vol-12: a href="javascript:;" 第十二冊
+		.clearfix
+		.book-shelf 
+			ul
+				li.book
+					a.vol-1 href="javascript:;" 第一冊
+					ul.book-section.sub-menu
+						li: a href="javascript:;" 國父全集序
+						li: a href="javascript:;" 三名主義
+						li: a href="javascript:;" 革命方略
+						li: a href="javascript:;" 建國方略
+						li: a href="javascript:;" 建國大綱
+				li.book: a.vol-2 href="javascript:;" 第二冊
+				li.book: a.vol-3 href="javascript:;" 第三冊
+				li.book: a.vol-4 href="javascript:;" 第四冊
+				li.book: a.vol-5 href="javascript:;" 第五冊
+				li.book: a.vol-6 href="javascript:;" 第六冊
+				li.book: a.vol-7 href="javascript:;" 第七冊
+				li.book: a.vol-8 href="javascript:;" 第八冊
+				li.book: a.vol-9 href="javascript:;" 第九冊
+				li.book: a.vol-10 href="javascript:;" 第十冊
+				li.book: a.vol-11 href="javascript:;" 第十一冊
+				li.book: a.vol-12 href="javascript:;" 第十二冊
 =render "partials/layout-foot"
