@@ -505,37 +505,106 @@ body {
 .banner-complate {
 	
 }
+%dropdown, .dropdown {
+	position: relative;
+	margin: auto; 
+	padding: auto;
+	@include pie-clearfix;
+	> li {
+		float: left;
+		//width: auto;
+		> a {
+			display: block;
+			//width: auto;
+		}
+		&:hover {
+			ul {
+				visibility: visible;
+			}
+		}
+	}
+}
+%sub-menu, .sub-menu {
+	position: absolute;
+	visibility: hidden;
+	display:block;
+	background: #456;
+}
+.book-shelf {
+	> ul {
+		@extend %dropdown;
+		> ul {
+			@extend %sub-menu;
+		}
+	}
+}
 .book-shelf {
 	background: url('#{$imagesPath}/book-shelf.png')no-repeat 0 96px;
-	padding: 0 20px;
 	min-height: 236px;
-	@extend %oh;
 }
 .book {
-	@include size(81px 156px);
+	//@include size(81px 156px);
 	background: url('#{$imagesPath}/book--n.png')no-repeat;
-	float: left;
 	margin-left: -1px;
 	&:hover {
 		background: url('#{$imagesPath}/book--o.png')no-repeat;
 	}
+	> a {
+		z-index: 2;
+		//?? 不work ??
+	}
+	> .book-section {
+		z-index: 0;
+		//?? 不work ??
+	}
 }
 .book > a, [class^='vol-'] {
 	@include size(81px 156px);
+	@extend %ir;
 	display: block;
 	background-image: url('#{$imagesPath}/book-name--n.png');
-	text-indent: -999px;
 	&:hover {
 		background-image: url('#{$imagesPath}/book-name--p.png');
 	}
 }
 @for $i from 0 through 12 {
-  .book:nth-child(#{$i+1}) a, .book:nth-child(#{$i+1}):hover a { background-position: -80px*$i 0; }
+  .book:nth-child(#{$i+1}) > a, .book:nth-child(#{$i+1}):hover > a { background-position: -80px*$i 0; }
 }
-// 加保險
 @for $i from 0 through 12 {
-  .vol-#{$i+1} a, .vol-#{$i+1}:hover a { background-position: -80px*$i 0; }
+  .vol-#{$i+1} , .vol-#{$i+1}:hover { background-position: -80px*$i 0; }
 }
+.book-section {
+	background: url('#{$imagesPath}/book-section-bg.png')repeat;
+	left: 8px;
+	vertical-align: top;
+	margin-top: -10px;
+	position: absolute;
+	&:before,&:after {
+		content:'';
+		width: 8px;
+		display: block;
+		height: 163px;
+	}
+	&:before {background: url('#{$imagesPath}/book-section-left.png')no-repeat;float:left;margin-left:-8px;}
+	&:after {background: url('#{$imagesPath}/book-section-right.png')no-repeat;float:right;margin-right:-8px;}
+	> li {
+		float: left;
+		margin: 40px 5px 0 5px;
+		text-align: center;
+	}
+	> li a {
+		width: 1em;
+		text-align: center;
+		display: block;
+		writing-mode: tb-rl;
+		-ms-writing-mode: tb-lr;
+		-webkit-writing-mode: vertical-lr;
+		-moz-writing-mode: vertical-lr;
+		-ms-writing-mode: vertical-lr;
+		writing-mode: vertical-lr;
+	}
+}
+
 // 國館紀要
 .yasten-history__banner {
 	@include size(1000px 118px);
