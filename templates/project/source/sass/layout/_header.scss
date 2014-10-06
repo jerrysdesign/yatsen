@@ -14,10 +14,10 @@
 	height: 130px;
 	position: relative;
 	.logo {
-		position: absolute;
-		top: 15px;
-		left: 20px;
+		margin-top: 15px;
+		margin-left: 20px;
 		@include ir;
+		float: left;
 	}
 }
 

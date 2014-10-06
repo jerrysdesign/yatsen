@@ -619,24 +619,6 @@ li {
 
 // 國父年譜 & 國館紀要
 .life__contarea,.history__contarea {
-	h2.title {
-		margin: 20px 0 10px 0;
-		background: url('#{$imagesPath}/head-title-bg.png');
-		span {
-			display: inline-block;
-			background: url('#{$imagesPath}/bg0.png');
-			&:before {
-				padding: 11px 13px;
-				content: '';
-				background: url('#{$imagesPath}/title-bg-before.png') no-repeat 0 50%;
-			}
-			&:after {
-				padding: 11px 13px;
-				content: '';
-				background: url('#{$imagesPath}/title-bg-after.png') no-repeat 0 50%;
-			}
-		}
-	}
 	.nav__list01, .nav__list02 {
 		float: left;
 		width: 280px;
@@ -702,7 +684,7 @@ li {
 				width: 122px;
 			}
 			a {
-				padding: 0 0.2em;
+				padding: 0 .2em;
 			}
 		}
 		.search-row {
@@ -727,13 +709,30 @@ li {
 		}
 	}
 }
-
+.title-cn-style {
+	font-family: $headingsFontFamily;
+	margin: 20px 0 10px 0;
+	background: url('#{$imagesPath}/head-title-bg.png');
+	span {
+		display: inline-block;
+		background: url('#{$imagesPath}/bg0.png');
+		&:before {
+			padding: 11px 13px;
+			content: '';
+			background: url('#{$imagesPath}/title-bg-before.png') no-repeat 0 50%;
+		}
+		&:after {
+			padding: 11px 13px;
+			content: '';
+			background: url('#{$imagesPath}/title-bg-after.png') no-repeat 0 50%;
+		}
+	}
+}
 %scroll-btn2 {
-	width: 25px;
-	height: 181px;
+	@include size(25px 181px);
 	position: absolute;
 	z-index: 9;
-	text-indent: -99999px;
+	@extend %ir;
 }
 
 // time-line2
@@ -743,8 +742,7 @@ li {
 	.scrollable {
 		position:relative;
 		overflow:hidden;
-		height: 181px;
-		width: 100%;
+		@include size(100% 181px);
 	}
 	.items {
 		position:absolute;
@@ -764,7 +762,6 @@ li {
 		@extend %scroll-btn2;
 		left: 0;
 		background-image: url('#{$imagesPath}/scroll-prev.png');
-
 	}
 	.scroll_next {
 		@extend %scroll-btn2;

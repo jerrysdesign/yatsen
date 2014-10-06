@@ -40,3 +40,19 @@ $mainNavColor: #f2ebb0;
 		color: $red;
 	}
 }
+.subject-link {
+	@extend %cont-font-size;
+	display: inline-block;
+	margin-top: 68px;
+	li {
+		display: inline-block;
+		margin-left: 5px;
+	}
+	li > a {
+		@extend %is-show;
+		padding: 0 5px;
+		line-height: 25px;
+		border: 1px solid #483c0a;
+		background-color: rgba(255,255,255,.5);
+	}
+}
