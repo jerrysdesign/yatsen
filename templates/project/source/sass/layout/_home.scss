@@ -542,33 +542,25 @@ body {
 	background: url('#{$imagesPath}/book-shelf.png')no-repeat 0 96px;
 	min-height: 236px;
 }
-.book {
-	//@include size(81px 156px);
-	background: url('#{$imagesPath}/book--n.png')no-repeat;
-	margin-left: -1px;
-	&:hover {
+li {
+	.book {z-index: 2;position: relative;}
+	.book-section {z-index: 1;}
+	.book {
+		@include size(81px 156px);
+		background: url('#{$imagesPath}/book--n.png')no-repeat;
+		margin-left: -1px;
+	}
+	&:hover .book {
 		background: url('#{$imagesPath}/book--o.png')no-repeat;
 	}
-	> a {
-		z-index: 2;
-		//?? 不work ??
-	}
-	> .book-section {
-		z-index: 0;
-		//?? 不work ??
-	}
 }
-.book > a, [class^='vol-'] {
+
+[class^='vol-'] {
 	@include size(81px 156px);
 	@extend %ir;
 	display: block;
 	background-image: url('#{$imagesPath}/book-name--n.png');
-	&:hover {
-		background-image: url('#{$imagesPath}/book-name--p.png');
-	}
-}
-@for $i from 0 through 12 {
-  .book:nth-child(#{$i+1}) > a, .book:nth-child(#{$i+1}):hover > a { background-position: -80px*$i 0; }
+	li:hover & {background-image: url('#{$imagesPath}/book-name--p.png');}
 }
 @for $i from 0 through 12 {
   .vol-#{$i+1} , .vol-#{$i+1}:hover { background-position: -80px*$i 0; }
@@ -589,7 +581,7 @@ body {
 	&:after {background: url('#{$imagesPath}/book-section-right.png')no-repeat;float:right;margin-right:-8px;}
 	> li {
 		float: left;
-		margin: 40px 5px 0 5px;
+		margin: 50px 10px 8px 0;
 		text-align: center;
 	}
 	> li a {
