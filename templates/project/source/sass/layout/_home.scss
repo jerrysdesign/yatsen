@@ -388,7 +388,7 @@ body {
 }
 
 // 大事年表
-.time-line2 {
+.time-line {
 	@extend %block-inner-15;
 	.vertical {
 		position:relative;
@@ -737,6 +737,7 @@ li {
 
 // time-line2
 .time-line2 {
+	@extend .time-line;
 	position: relative;
 	@extend %block-inner-15;
 	.scrollable {
@@ -744,18 +745,14 @@ li {
 		overflow:hidden;
 		@include size(100% 181px);
 	}
-	.items {
-		position:absolute;
-
-		li {
-			float: left;
-			width: 170px;
-			margin-left:20px;
-			font-size: 13px;
-			.item__list {
-				height: 50px;
-				line-height: 17px;
-			}
+	.time-line__item {
+		float: left;
+		width: 170px;
+		margin-left: 20px;
+		font-size: 13px;
+		.item__list {
+			height: 50px;
+			line-height: 17px;
 		}
 	}
 	.scroll_prev {
