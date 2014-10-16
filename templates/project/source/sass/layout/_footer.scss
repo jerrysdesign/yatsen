@@ -10,13 +10,23 @@
 	.logo0 {
 		@extend %ir;
 		@include span-columns(2, 17);
-		@include push(3.5);
-		@include size(90px 90px);
+		@include push(4.5);
+		@include size(90px 75px);
 		background: url('#{$imagesPath}/logo-0.png');
-		@include image-2x('#{$imagesPath}/logo-0@2x.png', 90px, 90px);
+		@include image-2x('#{$imagesPath}/logo-0@2x.png', 90px, 75px);
+	}
+	&.foot-b {
+		padding-top: 0;
+		background-position: bottom;
+		margin-top: 20px;
 	}
 }
 .copyright {
 	@include span-columns(10, 17);
 	padding-top: 5px;
+	.foot-b & {
+		line-height: 1.5;
+		@include span-columns(6, 17);
+		font-size: 12px;
+	}
 }
