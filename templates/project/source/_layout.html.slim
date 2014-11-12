@@ -13,7 +13,9 @@ html.no-js lang="zh-TW"
 		meta name="viewport" content="width=device-width, initial-scale=1"
 		link rel="stylesheet" href="css/style.css"
 		script src="js/vendor/modernizr-2.7.2.min.js"
-	body
+	/! 2014-09-29
+	body.home-bg
+		| <!-- 2014-09-29/ -->
 		/[if lt IE 9]
 			p.browsehappy
 				| 您使用的瀏覽器
@@ -22,7 +24,7 @@ html.no-js lang="zh-TW"
 				a href="http://browsehappy.com/" 請更新您的瀏覽器
 				| ，以維持正常瀏覽與體驗。
 		
-		.container.bg
+		.container
 			= yield
 
 		script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" 

@@ -62,8 +62,10 @@ $blue: #1894c4;
 $facebook: #3b5998;
 $twitter: #43bfe1;
 
-$color1: #d35400;
-$color2: $blue;
+// btn-color
+$color1		: #d35400;
+$btnColor1	: $color1;
+$btnColor2	: #439600;
 
 // Text
 $color-text-base: #212121;
@@ -110,3 +112,8 @@ $prefix-for-spec:      true !default; // required for keyframe mixin
 $width-large: 75em; // 1200/16
 $width-medium: 62em; // 992/16
 $width-small: 48em; // 768/16
+
+// 網站相關數據
+// -----------------------------
+$banner-complate: 297px;
+$searchComplateTab-contenHeight: 261px;

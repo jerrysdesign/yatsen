@@ -1,3 +1,5 @@
+// 簡易檢索
+
 = render "partials/layout-header"
 = render "partials/layout-main-nav"
 .main
@@ -22,7 +24,8 @@
 				ul
 					/ 全部
 					li.tabs-item
-						ul.search-row
+						/! 2014-09-20 新增 class: .full
+						ul.search-row.full
 							li.group
 								lebel
 									| 檢索策略: "
@@ -34,6 +37,9 @@
 								| 在搜尋的結果範圍內查詢：
 								input type="text"
 								a.search-utility__btn--search< href="javascript:;" 搜尋
+							/! 2014-09-20 新增 tag: li.group.fr > a.btn--green
+							li.group.fr
+								a.btn--green href="javascript:;" 主題知識地圖
 
 						table.search-list width="100%" border="0"
 							caption
@@ -126,4 +132,4 @@
 			.related.tabs-item
 				| 3
 		
-=render "partials/layout-foot"
+=render "partials/layout-foot-a"

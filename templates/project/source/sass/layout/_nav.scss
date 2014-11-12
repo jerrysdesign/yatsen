@@ -40,3 +40,50 @@ $mainNavColor: #f2ebb0;
 		color: $red;
 	}
 }
+.subject-link {
+	@extend %cont-font-size;
+	display: inline-block;
+	margin-top: 68px;
+	li {
+		display: inline-block;
+		margin-left: 5px;
+	}
+	li > a {
+		@extend %is-show;
+		padding: 0 5px;
+		line-height: 25px;
+		border: 1px solid #483c0a;
+		background-color: rgba(255,255,255,.5);
+	}
+}
+//子系統footer 按鈕組件
+%foot-navbar-space {
+	margin-bottom: 5px;
+}
+.foot-navbar {
+	@extend %navbar;
+	@extend %center-block;
+	@extend %foot-navbar-space;
+	width: 75%;
+	li {
+		margin: 0 3px;
+	}
+}
+
+.foot-btn {
+	@extend %is-show;
+	@include border-radius(3px);
+	background-color: #c3b89f;
+	border: solid 1px #bca977;
+	@include background-image(linear-gradient(to top, #d9d4ba, #fffcee));
+	line-height: 22px;
+	padding: 0 .5em;
+}
+.foot-nav {
+	@extend %foot-navbar-space;
+	@extend %center-block;
+	@extend .top-nav;
+	width: 33%;
+	clear: both;
+	float: none;
+}

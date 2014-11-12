@@ -1,0 +1,136 @@
+// 國父全集
+
+.header
+	/! 2014-10-16
+	.logo.logo-complate
+		img src="img/logo/logo-complete.png" alt="國立國父紀念館 中山學術資料庫 國父全集檢索系統"
+	.top-nav
+		ul
+			li
+				| 回首頁（
+				a<> href="javascript:;" 中山學術資料庫
+				| / 
+				a<> href="javascript:;" 國立國父紀念館
+				| )
+			li: a href="javascript:;" 網路書城
+.main
+	.row
+		.side--left.banner-complate
+			img src="img/banner-complete.png"
+		.area
+			.search-utility.search-complate
+				.search-tab
+					ul
+						li: a href="javascript:;" 簡易檢索
+						li: a href="javascript:;" 進階檢索
+				form.tab-content
+					ul
+						/ 簡易檢索
+						li.tabs-item.search-utility--seach
+							ul.search-row
+								li
+									input type="text"
+								li
+									a.search-utility__btn--search href="javascript:;" 搜尋
+							.clearfix
+							lebel
+								| 資料類型: 
+								ul.search-row
+									- (1..4).each do |n|
+										li
+											input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
+											label for="checkbox-#{n}"Check #{n}
+							.clearfix
+							lebel
+								| 查詢日期: 
+								ul.search-row
+									li
+										select
+											option
+												| 民國前
+												=rand(99)
+												| 年（
+												=rand(9999)
+												| ）
+
+										select
+											option =rand(12)
+										| 月	
+										select
+											option =rand(30)
+										| 日 ~ 
+										select
+											option
+												| 民國前
+												=rand(99)
+												| 年（
+												=rand(9999)
+												| ）
+										select
+											option =rand(12)
+										| 月	
+										select
+											option =rand(30)
+										| 日
+
+							.clearfix
+							lebel
+								| 選擇文件類型: 
+								ul.search-row
+									- (1..25).each do |n|
+										li style="width:19%"
+											input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
+											label for="checkbox-#{n}"Check #{n}
+
+						/ 進階檢索
+						li.tabs-item.search-utility--adv-seach
+							p =zh_lorem_paragraph
+	.row
+		h2.title-cn-style
+			span 年代瀏覽
+		.clearfix
+		.book-shelf 
+			ul
+				li
+					.book
+						a.vol-1 href="javascript:;" 第一冊
+					ul.book-section.sub-menu
+						li: a href="javascript:;" 國父全集序
+						li: a href="javascript:;" 三名主義
+						li: a href="javascript:;" 革命方略
+						li: a href="javascript:;" 建國方略
+						li: a href="javascript:;" 建國大綱
+				li
+					.book
+						a.vol-2 href="javascript:;" 第二冊
+				li
+					.book
+						a.vol-3 href="javascript:;" 第三冊
+				li
+					.book
+						a.vol-4 href="javascript:;" 第四冊
+				li
+					.book
+						a.vol-5 href="javascript:;" 第五冊
+				li
+					.book
+						a.vol-6 href="javascript:;" 第六冊
+				li
+					.book
+						a.vol-7 href="javascript:;" 第七冊
+				li
+					.book
+						a.vol-8 href="javascript:;" 第八冊
+				li
+					.book
+						a.vol-9 href="javascript:;" 第九冊
+				li
+					.book
+						a.vol-10 href="javascript:;" 第十冊
+				li
+					.book
+						a.vol-11 href="javascript:;" 第十一冊
+				li
+					.book
+						a.vol-12 href="javascript:;" 第十二冊
+=render "partials/layout-foot-b"

@@ -483,6 +483,9 @@
 	@include clearfix;
 }
 
+@mixin full {
+	width: 100%;
+}
 // block需有寬度margin左右設定auto才能居中
 @mixin center-block {
 	margin-left: auto;

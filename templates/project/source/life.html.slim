@@ -1,0 +1,164 @@
+// 國父年譜
+
+.header
+	/! 2014-10-16
+	.logo.logo-life
+		img src="img/logo/logo-life.png" alt="國立國父紀念館 國父年譜 國父全集檢索系統"
+	.subject-link
+		ul
+			li: a href="javascript:;" 國父事蹟要覽
+			li: a href="javascript:;" 國父影音
+			li: a href="javascript:;" 國父照片
+	.top-nav
+		ul
+			li
+				| 回首頁（
+				a<> href="javascript:;" 中山學術資料庫
+				| / 
+				a<> href="javascript:;" 國立國父紀念館
+				| )
+			li: a href="javascript:;" 網路書城
+.main
+	.row
+		.side--left.banner-complate
+			img src="img/banner-life.png"
+		.area
+			.search-utility.search-life
+				.search-tab
+					ul
+						li: a href="javascript:;" 簡易檢索
+						li: a href="javascript:;" 進階檢索
+				form.tab-content
+					ul
+						/ 簡易檢索
+						li.tabs-item.search-utility--seach
+							ul.search-row
+								li
+									input type="text"
+								li
+									a.search-utility__btn--search href="javascript:;" 搜尋
+							.clearfix
+							ul.search-row
+								li
+									input type="checkbox"
+									label  不限欄位
+								li
+									input type="checkbox"
+									label  題名
+							.clearfix
+							lebel
+								| 查詢日期: 
+								ul.search-row
+									li
+										select
+											option
+												| 民國前
+												=rand(99)
+												| 年（
+												=rand(9999)
+												| ）
+
+										select
+											option =rand(12)
+										| 月	
+										select
+											option =rand(30)
+										| 日 ~ 
+										select
+											option
+												| 民國前
+												=rand(99)
+												| 年（
+												=rand(9999)
+												| ）
+										select
+											option =rand(12)
+										| 月	
+										select
+											option =rand(30)
+										| 日
+
+							.clearfix
+							lebel
+								| 國父年齡: 
+								ul.search-row
+									li
+										select>
+											option
+												=rand(99)
+												| 歲 
+										| ~ 
+										select<
+											option 請選擇
+
+
+						/ 進階檢索
+						li.tabs-item.search-utility--adv-seach
+							p =zh_lorem_paragraph
+	.row.life__contarea
+		h2.title-cn-style
+			span 國父事蹟
+		ul.nav__list01
+			li: a href="javascript:;" 家世與求學 (1866~1893)
+			li: a href="javascript:;" 興中會的成立(1894~1900)
+			li: a.currnet href="javascript:;" 中國同盟會的成立 (1900~1906)
+			li: a href="javascript:;" 革命起義再接再厲 (1907~1911)
+			li: a href="javascript:;" 武昌起義推翻專政1911)
+			li: a href="javascript:;" 民國肇建與宣揚主義 (1912~1913)
+			li: a href="javascript:;" 二次革命與討袁護法 (1913~1918)
+			li: a href="javascript:;" 改組政黨進行北伐 (1919~1922)
+			li: a href="javascript:;" 革命之再起 (1923~1924)
+			li: a href="javascript:;" 北上與逝世 (1924~1925)
+			li: a href="javascript:;" 國父與臺灣
+		ul.life__cont
+			li
+				h3.title 中國同盟會的成立。民國前12年~民國前6年(1900~1906)
+				.life__cont--row01
+					p 民國紀年前十二年──清光緒二十六年，庚子(西曆一九○○年)
+					p 先生三十五歲
+					ul
+						li ‧春 宮崎寅藏代表興漢會來日，向先生呈總會長印章。
+						li ‧三月初四日(西曆四月三日) 楊衢雲悟容閎。
+						li ‧三月二十七日(四月二十六日) 楊衢雲離港赴日本。
+						li ‧夏 接劉學詢函，謂李鴻章因北方拳亂，欲以粵省獨立，請先生來粵協同進行。
+						li ‧五月二十一日(六月十七日) 偕鄭士良及宮崎寅藏等自日本抵香港，因未獲登岸，乃在舟中策劃粵事。
+				.life__cont--row02
+					ul
+						li
+							a href="javascript:;"
+								| 民國前12年(1900)
+								br
+								| 清光緒26年，庚子
+						li
+							a href="javascript:;"
+								| 民國前11年(1901)
+								br
+								| 清光緒27年，庚子
+						li
+							a href="javascript:;"
+								| 民國前12年(1902)
+								br
+								| 清光緒28年，庚子
+						li
+							a href="javascript:;"
+								| 民國前12年(1903)
+								br
+								| 清光緒29年，庚子
+						li
+							a href="javascript:;"
+								| 民國前12年(1904)
+								br
+								| 清光緒30年，庚子
+						li
+							a href="javascript:;"
+								| 民國前12年(1905)
+								br
+								| 清光緒31年，庚子
+						li
+							a href="javascript:;"
+								| 民國前12年(1906)
+								br
+								| 清光緒32年，庚子
+					.clearfix
+
+=render "partials/layout-foot-b"
