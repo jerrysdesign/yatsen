@@ -10,6 +10,9 @@ $(function() {
 		size: 1,
 		mousewheel: true
 	});
+	$(".scrollable").scrollable({
+		mousewheel: true
+	});
 	
 });
 
