@@ -539,9 +539,9 @@ body {
 			@include size(81px 156px);
 			background: url('#{$imagesPath}/book--n.png')no-repeat;
 			margin-left: -1px;
-		}
-		&:hover .book {
-			background: url('#{$imagesPath}/book--o.png')no-repeat;
+			&:hover {
+				background: url('#{$imagesPath}/book--o.png')no-repeat;
+			}
 		}
 	}
 }
@@ -570,19 +570,19 @@ body {
 	> li {
 		float: left;
 		width: 1em;
-		margin: 50px 10px 8px 0;
+		margin: 50px 5px 8px 5px;
 		text-align: center;
 		line-height: 1.1;
 	}
 	> li a {
 		width: 1em;
 		display: block;
-		// writing-mode: tb-rl;
-		// -ms-writing-mode: tb-lr;
-		// -webkit-writing-mode: vertical-lr;
-		// -moz-writing-mode: vertical-lr;
-		// -ms-writing-mode: vertical-lr;
-		// writing-mode: vertical-lr;
+		writing-mode: tb-rl;
+		-ms-writing-mode: tb-lr;
+		-webkit-writing-mode: vertical-lr;
+		-moz-writing-mode: vertical-lr;
+		-ms-writing-mode: vertical-lr;
+		writing-mode: vertical-lr;
 	}
 }
 
