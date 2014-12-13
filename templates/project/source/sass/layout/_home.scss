@@ -1,6 +1,6 @@
 /* =======================
-   Layout/Home
-   ======================= */
+	 Layout/Home
+	 ======================= */
 
 .home {
 }
@@ -65,6 +65,9 @@ body {
 }
 %block-inner-10 {
 	padding: 10px;
+}
+%block-inner-2030 {
+	padding: 20px 30px ;
 }
 .search-utility {
 	@extend %block;
@@ -165,17 +168,17 @@ body {
 }
 %btn-color1 {
 	@extend %control-font-size;
-    @include btn($btnColor1,$btnColor1);
+		@include btn($btnColor1,$btnColor1);
 }
 %btn-color2 {
 	@extend %control-font-size;
-    @include btn($btnColor2,$btnColor2);
+		@include btn($btnColor2,$btnColor2);
 }
 %btn-color-df {
 	@extend %control-font-size;
-    @include btn($black-0,$black-5);
-    border:1px solid $black-30;
-    color: black;
+		@include btn($black-0,$black-5);
+		border:1px solid $black-30;
+		color: black;
 }
 
 .search-utility__btn--search {
@@ -554,7 +557,7 @@ body {
 	li:hover & {background-image: url('#{$imagesPath}/book-name--p.png');}
 }
 @for $i from 0 through 12 {
-  .vol-#{$i+1} , .vol-#{$i+1}:hover { background-position: -80px*$i 0; }
+	.vol-#{$i+1} , .vol-#{$i+1}:hover { background-position: -80px*$i 0; }
 }
 .book-section {
 	background: url('#{$imagesPath}/book-section-bg.png')repeat;
@@ -754,5 +757,35 @@ body {
 		top: 14px;
 		right: 0;
 		background-image: url('#{$imagesPath}/scroll-next.png');
+	}
+}
+
+/* =======================
+	 sun-book
+	 ======================= */
+.block-2030 {
+	@extend %block;
+	@extend %block-inner-2030;
+	background-color: white;
+}
+.sun-book-table {
+	background-color: #fff;
+	@extend %table-bordered;
+	@extend %cont-font-size;
+	$color: #a0ac5e;
+	td, th { border: 1px solid $color;}
+	th {
+		background-color: lighten($color, 20%);
+	}
+	tr {
+		&:nth-child(odd) {
+			background-color: lighten($color, 47%);
+		}
+		&:nth-child(even) {
+			background-color: lighten($color, 43%);
+		}
+		td:nth-child(1) {
+			@extend %text-center;
+		}
 	}
 }

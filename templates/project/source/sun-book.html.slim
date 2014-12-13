@@ -1,0 +1,112 @@
+// 孫學專書數位系統
+
+.header
+	/! 2014-10-16
+	.logo.logo-complate
+		img src="img/logo/logo--sun-book.png" alt="國立國父紀念館 中山學術資料庫 孫學專書數位系統"
+	.top-nav
+		ul
+			li
+				| 回首頁（
+				a<> href="javascript:;" 中山學術資料庫
+				| / 
+				a<> href="javascript:;" 國立國父紀念館
+				| )
+			li: a href="javascript:;" 網路書城
+.main
+	.row
+		.side--left.banner-complate
+			img src="img/banner--sun-book.png"
+		.area
+			.search-utility.search-complate
+				.search-tab
+					ul
+						li: a href="javascript:;" 簡易檢索
+						li: a href="javascript:;" 進階檢索
+				form.tab-content
+					ul
+						/ 簡易檢索
+						li.tabs-item.search-utility--seach
+							/ ul.search-row
+							/ 	li
+							/ 		input type="text"
+							/ 	li
+							/ 		a.search-utility__btn--search href="javascript:;" 搜尋
+							/ .clearfix
+							/ lebel
+							/ 	| 資料類型: 
+							/ 	ul.search-row
+							/ 		- (1..4).each do |n|
+							/ 			li
+							/ 				input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
+							/ 				label for="checkbox-#{n}"Check #{n}
+							/ .clearfix
+							/ lebel
+							/ 	| 查詢日期: 
+							/ 	ul.search-row
+							/ 		li
+							/ 			select
+							/ 				option
+							/ 					| 民國前
+							/ 					=rand(99)
+							/ 					| 年（
+							/ 					=rand(9999)
+							/ 					| ）
+
+							/ 			select
+							/ 				option =rand(12)
+							/ 			| 月	
+							/ 			select
+							/ 				option =rand(30)
+							/ 			| 日 ~ 
+							/ 			select
+							/ 				option
+							/ 					| 民國前
+							/ 					=rand(99)
+							/ 					| 年（
+							/ 					=rand(9999)
+							/ 					| ）
+							/ 			select
+							/ 				option =rand(12)
+							/ 			| 月	
+							/ 			select
+							/ 				option =rand(30)
+							/ 			| 日
+
+							/ .clearfix
+							/ lebel
+							/ 	| 選擇文件類型: 
+							/ 	ul.search-row
+							/ 		- (1..25).each do |n|
+							/ 			li style="width:19%"
+							/ 				input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
+							/ 				label for="checkbox-#{n}"Check #{n}
+
+						/ 進階檢索
+						li.tabs-item.search-utility--adv-seach
+							p =zh_lorem_paragraph
+	.row
+		.block-2030
+			h2.title-cn-style
+				span 最新出版專書
+			.clearfix
+			table.sun-book-table border="0" width="100%" 
+				thead
+					tr
+						th scope="col"  &nbsp;
+						th scope="col"  書名
+						th scope="col"  作者
+						th scope="col"  出版社
+						th scope="col"  出版日期
+				tbody
+					- (1..10).each do |n|
+						tr
+							td
+								.text-center #{n}
+							td
+								a href="javascript:;" =zh_lorem_words 20 
+							td =zh_lorem_name
+							td =zh_lorem_name
+							td =lorem_date("%Y/%m/%d")
+
+=render "partials/layout-foot-b"
