@@ -207,6 +207,10 @@ body {
 		height: $searchComplateTab-contenHeight;
 		background-color: #FFF;
 	}
+	.search-sun-book &{
+		height: $searchSunbookTab-contenHeight;
+		background-color: #FFF;
+	}
 }
 
 .search-list {

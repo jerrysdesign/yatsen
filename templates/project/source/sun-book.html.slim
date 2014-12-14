@@ -18,7 +18,7 @@
 		.side--left.banner-complate
 			img src="img/banner--sun-book.png"
 		.area
-			.search-utility.search-complate
+			.search-utility.search-sun-book
 				.search-tab
 					ul
 						li: a href="javascript:;" 簡易檢索
@@ -27,60 +27,41 @@
 					ul
 						/ 簡易檢索
 						li.tabs-item.search-utility--seach
-							/ ul.search-row
-							/ 	li
-							/ 		input type="text"
-							/ 	li
-							/ 		a.search-utility__btn--search href="javascript:;" 搜尋
-							/ .clearfix
-							/ lebel
-							/ 	| 資料類型: 
-							/ 	ul.search-row
-							/ 		- (1..4).each do |n|
-							/ 			li
-							/ 				input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
-							/ 				label for="checkbox-#{n}"Check #{n}
-							/ .clearfix
-							/ lebel
-							/ 	| 查詢日期: 
-							/ 	ul.search-row
-							/ 		li
-							/ 			select
-							/ 				option
-							/ 					| 民國前
-							/ 					=rand(99)
-							/ 					| 年（
-							/ 					=rand(9999)
-							/ 					| ）
-
-							/ 			select
-							/ 				option =rand(12)
-							/ 			| 月	
-							/ 			select
-							/ 				option =rand(30)
-							/ 			| 日 ~ 
-							/ 			select
-							/ 				option
-							/ 					| 民國前
-							/ 					=rand(99)
-							/ 					| 年（
-							/ 					=rand(9999)
-							/ 					| ）
-							/ 			select
-							/ 				option =rand(12)
-							/ 			| 月	
-							/ 			select
-							/ 				option =rand(30)
-							/ 			| 日
-
-							/ .clearfix
-							/ lebel
-							/ 	| 選擇文件類型: 
-							/ 	ul.search-row
-							/ 		- (1..25).each do |n|
-							/ 			li style="width:19%"
-							/ 				input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
-							/ 				label for="checkbox-#{n}"Check #{n}
+							ul.search-row
+								li
+									input type="text"
+								li
+									a.search-utility__btn--search href="javascript:;" 搜尋
+							.clearfix
+							ul.search-row
+								- (1..4).each do |n|
+									li
+										input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
+										label for="checkbox-#{n}"Check #{n}
+							.clearfix
+							lebel
+								| 出版日期 
+								ul.search-row
+									li
+										select
+											option 請選擇
+										|  ~ 
+										select
+											option 請選擇
+							.clearfix
+							lebel
+								| 出版語文
+								ul.search-row
+									li
+										select
+											option 請選擇
+							.clearfix
+							lebel
+								| 出版地點
+								ul.search-row
+									li
+										select
+											option 請選擇
 
 						/ 進階檢索
 						li.tabs-item.search-utility--adv-seach

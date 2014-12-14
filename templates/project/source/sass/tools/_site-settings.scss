@@ -115,5 +115,10 @@ $width-small: 48em; // 768/16
 
 // 網站相關數據
 // -----------------------------
+$search-tab:			36px;
+//complate
 $banner-complate: 297px;
-$searchComplateTab-contenHeight: 261px;
+$searchComplateTab-contenHeight: $banner-complate - $search-tab;
+//sun-book
+$banner-complate: 223px;
+$searchSunbookTab-contenHeight: $banner-complate - $search-tab;
