@@ -77,3 +77,21 @@ $page-container: ".container";
 	}
 }
 
+//
+.sun-archives__banner {
+	.side--left.banner-complate {
+		width: auto;
+	}
+	.banner-complate + .area {
+		width: auto;
+		@extend %left-col;
+	}
+}
+
+.block-e {
+	.side--left { width: 178px;}
+	.area {
+		margin-right: 0;
+		width: 774px;
+	}
+}

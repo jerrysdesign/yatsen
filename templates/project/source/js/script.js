@@ -14,6 +14,14 @@ $(function() {
 	$(".scrollable").scrollable({
 		mousewheel: true
 	});
+	 $(".accordion").tabs(
+    ".accordion .panel",
+    {tabs: '.accordion .list', effect: 'slide', initialIndex: 0}
+  );
+  $(".panel .item").click(function(){
+  	$(this).siblings().removeClass('active');
+  	$(this).addClass('active');
+  });
 	
 });
 

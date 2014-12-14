@@ -1,0 +1,65 @@
+// 孫學期刊
+
+.header
+	/! 2014-10-16
+	.logo.logo-complate
+		img src="img/logo/logo--sun-archive.png" alt="國立國父紀念館 中山學術資料庫 孫學期刊論元全文檢索系統"
+	.top-nav
+		ul
+			li
+				| 回首頁（
+				a<> href="javascript:;" 中山學術資料庫
+				| / 
+				a<> href="javascript:;" 國立國父紀念館
+				| )
+			li: a href="javascript:;" 網路書城
+.main
+	.row.sun-archives__banner
+		.side--left.banner-complate
+			img src="img/banner--sun-archive.png"
+		.area
+			.search-utility style="margin-top:0;"
+				form
+					.search-utility--seach
+						h2.title 檢索功能
+						ul.search-row
+							li
+								input type="text"
+							li
+								a.search-utility__btn--search href="javascript:;" 查詢
+						.clearfix
+						ul.search-row
+							- (1..4).each do |n|
+								li
+									input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
+									label for="checkbox-#{n}"Check #{n}
+						.clearfix
+						lebel
+							| 出版日期 
+							ul.search-row
+								li
+									select
+										option 請選擇
+									|  ~ 
+									select
+										option 請選擇
+						.clearfix
+
+	.row.block-e 
+		.side--left
+			ul.accordion
+				-5.times do
+					li.list
+						h4 第15期(2014年)
+						ul.panel
+							-5.times do
+								li.item: a href="javascript:;" =zh_lorem_sentences 1 
+				li.list
+					h4 第15期(2014年)
+					ul.panel
+						-3.times do
+							li.item =zh_lorem_sentences 1 
+		.area
+			.view
+
+=render "partials/layout-foot-b"
