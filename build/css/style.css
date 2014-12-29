@@ -252,9 +252,9 @@ input:focus, textarea:focus { outline: none; border-color: #5ca9e4; box-shadow: 
 .container, .header, .main-nav, .main, .footer, .breadcrumbs, .row { *zoom: 1; width: 1000px; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; }
 .container:after, .header:after, .main-nav:after, .main:after, .footer:after, .breadcrumbs:after, .row:after { content: ""; display: table; clear: both; }
 
-.area, .side--left, .side--left.banner-complate, .sun-archives__banner .banner-complate + .area { float: left; margin-right: 20px; display: inline; }
+.area, .side--left, .side--left.banner-complate, .side--left.banner-tpp, .sun-archives__banner .banner-complate + .area { float: left; margin-right: 20px; display: inline; }
 
-.side--right, .banner-complate + .area { float: right; margin-right: 0; display: inline; }
+.side--right, .banner-complate + .area, .banner-tpp + .area { float: right; margin-right: 0; display: inline; }
 
 .area { width: 780px; }
 
@@ -329,6 +329,7 @@ body:before { content: ''; background: url("../img/sb-bg-1.png") no-repeat cente
 .search-page .tab-content { background: #fff; }
 .search-complate .tab-content { height: 261px; background-color: #FFF; }
 .search-sun-book .tab-content { height: 187px; background-color: #FFF; }
+.search-tpp .tab-content { height: 245px; background-color: #FFF; }
 
 .search-list { margin-top: 10px; }
 .search-list .search-list__title { background-color: #cccccc; }
@@ -406,23 +407,29 @@ body:before { content: ''; background: url("../img/sb-bg-1.png") no-repeat cente
 .related .related-list + .related-title { margin-top: 10px; }
 .related ol { list-style-type: decimal; list-style-position: inside; }
 
-.book-shelf > ul, .dropdown { position: relative; }
-.book-shelf > ul > li, .dropdown > li { float: left; }
-.book-shelf > ul > li > a, .dropdown > li > a { display: block; }
-.book-shelf > ul > li:hover ul, .dropdown > li:hover ul { visibility: visible; }
+.book-shelf > ul, .book-shelf-tpp > ul, .dropdown { position: relative; }
+.book-shelf > ul > li, .book-shelf-tpp > ul > li, .dropdown > li { float: left; }
+.book-shelf > ul > li > a, .book-shelf-tpp > ul > li > a, .dropdown > li > a { display: block; }
+.book-shelf > ul > li:hover ul, .book-shelf-tpp > ul > li:hover ul, .dropdown > li:hover ul { visibility: visible; }
 
 .sub-menu { position: absolute; visibility: hidden; }
 
-.book-shelf > ul { left: 20px; }
+.book-shelf > ul, .book-shelf-tpp > ul { left: 20px; }
 
-.book-shelf { background: url("../img/book-shelf.png") no-repeat 0 96px; min-height: 236px; }
-.book-shelf li .book { z-index: 2; position: relative; }
-.book-shelf li .book-section { z-index: 1; }
-.book-shelf li .book { height: 156px; width: 81px; background: url("../img/book--n.png") no-repeat; margin-left: -1px; }
-.book-shelf li .book:hover { background: url("../img/book--o.png") no-repeat; }
+.book-shelf, .book-shelf-tpp { background: url("../img/book-shelf.png") no-repeat 0 96px; min-height: 236px; }
+.book-shelf li .book, .book-shelf-tpp li .book { z-index: 2; position: relative; }
+.book-shelf li .book-section, .book-shelf-tpp li .book-section { z-index: 1; }
+.book-shelf li .book, .book-shelf-tpp li .book { height: 156px; width: 81px; background: url("../img/book--n.png") no-repeat; margin-left: -1px; }
+.book-shelf li .book:hover, .book-shelf-tpp li .book:hover { background: url("../img/book--o.png") no-repeat; }
+
+.book-shelf-tpp { background: url("../img/book-shelf-tpp.png") no-repeat 0 0; height: 239px; width: 732px; margin: 0 auto; }
+.book-shelf-tpp > ul { left: 206px; top: 6px; }
 
 [class^='vol-'] { height: 156px; width: 81px; display: block; background-image: url("../img/book-name--n.png"); }
-li:hover [class^='vol-'] { background-image: url("../img/book-name--p.png"); }
+[class^='vol-']:hover { background-image: url("../img/book-name--p.png"); }
+
+.book-shelf-tpp [class^='vol-'] { background-image: url("../img/book-name-tpp--n.png"); }
+.book-shelf-tpp [class^='vol-']:hover { background-image: url("../img/book-name-tpp--p.png"); }
 
 .vol-1, .vol-1:hover { background-position: 0px 0; }
 
@@ -531,6 +538,11 @@ li:hover [class^='vol-'] { background-image: url("../img/book-name--p.png"); }
 
 .view { background: #939393; min-height: 348px; overflow: hidden; }
 
+/* =======================
+	 tpp
+	 ======================= */
+.half { float: left; width: 50%; display: inline-block; }
+
 /* ======================= Layout/Header ======================= */
 .logo1 { height: 100px; width: 400px; background: url("../img/logo-01.png") no-repeat; }
 
@@ -573,11 +585,11 @@ li:hover [class^='vol-'] { background-image: url("../img/book-name--p.png"); }
 
 /* ======================= Layout/Main ======================= */
 /* ======================= Page Layout styles ======================= */
-.side--left.banner-complate { width: 330px; }
+.side--left.banner-complate, .side--left.banner-tpp { width: 330px; }
 
-.banner-complate + .area { width: 650px; }
+.banner-complate + .area, .banner-tpp + .area { width: 650px; }
 
-.search-complate, .search-life, .search-sun-book { margin-top: 0; }
+.search-complate, .search-life, .search-sun-book, .search-tpp { margin-top: 0; }
 
 .yasten-history__banner .search-utility { width: 630px; float: right; }
 .yasten-history__banner .search-utility--seach { background: none; }
