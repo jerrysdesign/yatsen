@@ -26,6 +26,7 @@ color_output = false
 # sass-convert -R --from scss --to sass scss scss && rm -rf sass && mv scss sass
 preferred_syntax = :scss
 
+sourcemap = true # by Fire.app 
 css_dir = "css" # by Fire.app 
 sass_dir = "sass" # by Fire.app 
 images_dir = "img" # by Fire.app 
@@ -38,6 +39,5 @@ output_style = :compact # by Fire.app
 relative_assets = false # by Fire.app 
 line_comments = false # by Fire.app 
 sass_options = {:debug_info=>false} # by Fire.app 
-sourcemap = true # by Fire.app 
-fireapp_coffeescript_options = {:bare=>false} # by Fire.app 
+fireapp_coffeescript_options = {:bare=>true} # by Fire.app 
 fireapp_livescript_options = {:bare=>false} # by Fire.app 
