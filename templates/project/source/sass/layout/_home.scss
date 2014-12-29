@@ -224,6 +224,10 @@ body {
 		height: $searchSunbookTab-contenHeight;
 		background-color: #FFF;
 	}
+	.search-tpp & {
+		height: $searchTppTab-contenHeight;
+		background-color: #FFF;
+	}
 }
 
 .search-list {
@@ -565,13 +569,29 @@ body {
 		}
 	}
 }
-
+// 三民主義
+.book-shelf-tpp {
+	@extend .book-shelf;
+	background: url('#{$imagesPath}/book-shelf-tpp.png')no-repeat 0 0;
+	@include size(732px 239px);
+	margin: 0 auto;
+	> ul {
+		left: 206px;
+		top: 6px;
+	}
+}
 [class^='vol-'] {
 	@include size(81px 156px);
 	@extend %ir;
 	display: block;
 	background-image: url('#{$imagesPath}/book-name--n.png');
-	li:hover & {background-image: url('#{$imagesPath}/book-name--p.png');}
+	&:hover  {background-image: url('#{$imagesPath}/book-name--p.png');}
+}
+.book-shelf-tpp {
+	[class^='vol-'] {
+		background-image: url('#{$imagesPath}/book-name-tpp--n.png');
+		&:hover {background-image: url('#{$imagesPath}/book-name-tpp--p.png');}
+	}
 }
 @for $i from 0 through 12 {
 	.vol-#{$i+1} , .vol-#{$i+1}:hover { background-position: -80px*$i 0; }
@@ -873,4 +893,12 @@ body {
 	background: #939393;
 	min-height: 348px;
 	overflow: hidden;
+}
+/* =======================
+	 tpp
+	 ======================= */
+.half {
+	float: left;
+	width: 50%;
+	display: inline-block;
 }

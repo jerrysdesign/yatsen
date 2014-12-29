@@ -54,15 +54,15 @@ $page-container: ".container";
 /* ======================= Page Layout styles ======================= */
 // complete
 
-.side--left.banner-complate {
+.side--left.banner-complate, .side--left.banner-tpp{
 	width: 330px;
 	@extend %left-col;
 }
-.banner-complate + .area {
+.banner-complate + .area, .banner-tpp + .area{
 	width: 650px;
 	@extend %right-col;
 }
-.search-complate, .search-life, .search-sun-book {
+.search-complate, .search-life, .search-sun-book, .search-tpp {
 	margin-top: 0;
 }
 

@@ -1,0 +1,132 @@
+// 三民主義全文檢索系統
+
+.header
+	/! 2014-10-16
+	.logo.logo-tpp
+		img src="img/logo/logo--tpp.png" alt="國立國父紀念館 中山學術資料庫 民主義全文檢索系統"
+	.top-nav
+		ul
+			li
+				| 回首頁（
+				a<> href="javascript:;" 中山學術資料庫
+				| / 
+				a<> href="javascript:;" 國立國父紀念館
+				| )
+			li: a href="javascript:;" 網路書城
+.main
+	.row
+		.side--left.banner-tpp
+			img src="img/banner--tpp.png" style="margin: -5px -9px -14px -9px"
+		.area
+			.search-utility.search-tpp
+				.search-tab
+					ul
+						li: a href="javascript:;" 簡易檢索
+						li: a href="javascript:;" 進階檢索
+				form.tab-content
+					ul
+						/ 簡易檢索
+						li.tabs-item.search-utility--seach
+							ul.search-row
+								li
+									input type="text"
+								li
+									a.search-utility__btn--search href="javascript:;" 搜尋
+							.clearfix
+							lebel
+								| 資料類型: 
+								ul.search-row
+									- (1..4).each do |n|
+										li
+											input type="checkbox" name="checkbox-#{n}" id="checkbox-#{n}"
+											label for="checkbox-#{n}"Check #{n}
+							.clearfix
+							lebel
+								| 查詢日期: 
+								ul.search-row
+									li
+										select
+											option
+												| 民國前
+												=rand(99)
+												| 年（
+												=rand(9999)
+												| ）
+
+										select
+											option =rand(12)
+										| 月	
+										select
+											option =rand(30)
+										| 日 ~ 
+										select
+											option
+												| 民國前
+												=rand(99)
+												| 年（
+												=rand(9999)
+												| ）
+										select
+											option =rand(12)
+										| 月	
+										select
+											option =rand(30)
+										| 日
+
+							.clearfix
+							lebel
+								em 選擇查詢範圍
+								ul.search-row
+										li style="width:100%"
+											input type="checkbox"
+											label 所有
+										li.half
+											input type="checkbox"
+											label 民族主義 (第一講至第六講)
+										li.half
+											input type="checkbox"
+											label 民權主義 (第一講至第六講)
+										li.half
+											input type="checkbox"
+											label 民生主義 (第一講至第四講)
+										li.half
+											input type="checkbox"
+											label 附錄: 民生主義育樂兩篇補述
+
+						/ 進階檢索
+						li.tabs-item.search-utility--adv-seach
+							p =zh_lorem_paragraph
+	.row
+		h2.title-cn-style
+			span 電子書庫
+		.clearfix
+		.book-shelf-tpp
+			ul
+				li
+					.book
+						a.vol-1 href="javascript:;" 民族主義
+					ul.book-section.sub-menu
+						li: a href="javascript:;" 第一講
+						li: a href="javascript:;" 第二講
+						li: a href="javascript:;" 第三講
+						li: a href="javascript:;" 第四講
+						li: a href="javascript:;" 第五講
+						li: a href="javascript:;" 第六講
+				li
+					.book
+						a.vol-2 href="javascript:;" 民權主義
+					ul.book-section.sub-menu
+						li: a href="javascript:;" 第一講
+						li: a href="javascript:;" 第二講
+						li: a href="javascript:;" 第三講
+						li: a href="javascript:;" 第四講
+						li: a href="javascript:;" 第五講
+						li: a href="javascript:;" 第六講
+				li
+					.book
+						a.vol-3 href="javascript:;" 民生主義
+				li
+					.book
+						a.vol-4 href="javascript:;" 附錄：民生主義育樂兩篇補述
+
+=render "partials/layout-foot-b"
