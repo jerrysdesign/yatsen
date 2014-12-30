@@ -1,0 +1,44 @@
+// 孫學期刊論文
+
+.header
+	.logo.logo-sun
+		img src="img/logo/logo--sun-archive.png" alt="國立國父紀念館 中山學術資料庫 孫學期刊論元全文檢索系統"
+	.top-nav
+		ul
+			li
+				| 回首頁（
+				a<> href="javascript:;" 中山學術資料庫
+				| / 
+				a<> href="javascript:;" 國立國父紀念館
+				| )
+			li: a href="javascript:;" 網路書城
+.main
+	.row
+		.side--left.banner-sun
+			img src="img/banner--sun.png"
+		.area
+			.search-utility.search-sun
+				.search-tab
+					ul
+						li: a href="javascript:;" 簡易檢索
+						li: a href="javascript:;" 進階檢索
+				form.tab-content
+					ul
+						/ 簡易檢索
+						li.tabs-item.search-utility--seach
+							p =zh_lorem_paragraph
+						/ 進階檢索
+						li.tabs-item.search-utility--adv-seach
+							p =zh_lorem_paragraph
+	.row
+		h2.title-cn-style
+			span 本館期刊出版品
+		.clearfix
+		.half
+			a href="javascript:;" style="float:left"
+				img src="img/sun-archive-panel.png"
+		.half
+			a href="javascript:;" style="float:right"
+				img src="img/yasten-book-panel.png" style="textalign:right"
+		.clearfix
+=render "partials/layout-foot-b"

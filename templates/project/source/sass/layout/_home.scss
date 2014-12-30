@@ -228,6 +228,10 @@ body {
 		height: $searchTppTab-contenHeight;
 		background-color: #FFF;
 	}
+	.search-sun & {
+		height: $searchSunTab-contenHeight;
+		background-color: #FFF;
+	}
 }
 
 .search-list {
