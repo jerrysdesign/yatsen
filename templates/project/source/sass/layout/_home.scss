@@ -13,6 +13,7 @@
 	border: 4px solid $colorCarrot;
 	color: $colorWetAsphalt;
 	z-index: 9999;
+	@extend %text-center;
 	a { font-weight: bolder; text-decoration: underline; color: #fff;}
 }
 
@@ -440,10 +441,14 @@ body {
 		height:20000em;
 	}
 	.block__title {@extend %text-center;}
+	.lt-ie9 & {
+		.block__title {
+			text-align: center;
+		}
+	}
 	.scroll-top {
 		@extend %scroll-btn;
 		background-image: url('#{$imagesPath}/scroll-top.png');
-
 	}
 	.scroll-down {
 		@extend %scroll-btn;
@@ -933,6 +938,12 @@ body {
 /* =======================
 	 let-ie9
 	 ======================= */
-.let-ie9 {
+.lt-ie9 {
+}
 
+.rest-table {
+	th, tr, td {
+		padding: 0;
+		border: none;
+	}
 }

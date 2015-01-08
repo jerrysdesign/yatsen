@@ -86,4 +86,8 @@ $mainNavColor: #f2ebb0;
 	width: 33%;
 	clear: both;
 	float: none;
+	.lt-ie9 {
+		@extend %text-center;
+		width: 35%;
+	}
 }
