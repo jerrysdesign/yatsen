@@ -628,6 +628,18 @@ body {
 		-ms-writing-mode: vertical-lr;
 		writing-mode: vertical-lr;
 	}
+	.let-ie9 & {
+		> li a {
+			width: 1em;
+			display: block;
+			writing-mode: tb-rl;
+			-ms-writing-mode: tb-lr;
+			-webkit-writing-mode: vertical-lr;
+			-moz-writing-mode: vertical-lr;
+			-ms-writing-mode: vertical-lr;
+			writing-mode: vertical-lr;
+		}
+	}
 }
 
 // 國館紀要
@@ -905,4 +917,11 @@ body {
 	float: left;
 	width: 50%;
 	display: inline-block;
+}
+
+/* =======================
+	 let-ie9
+	 ======================= */
+.let-ie9 {
+
 }
