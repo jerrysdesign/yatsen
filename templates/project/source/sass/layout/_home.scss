@@ -619,6 +619,7 @@ body {
 .book-section {
 	background: url('#{$imagesPath}/book-section-bg.png')repeat;
 	margin-top: -10px;
+	height: 163px;
 	&:before,&:after {
 		content:'';
 		width: 8px;
@@ -631,7 +632,6 @@ body {
 		float: left;
 		width: 1em;
 		margin: 50px 5px 8px 5px;
-		text-align: center;
 		line-height: 1.1;
 	}
 	> li a {
@@ -644,16 +644,10 @@ body {
 		-ms-writing-mode: vertical-lr;
 		writing-mode: vertical-lr;
 	}
-	.let-ie9 & {
-		> li a {
-			width: 1em;
-			display: block;
-			writing-mode: tb-rl;
-			-ms-writing-mode: tb-lr;
-			-webkit-writing-mode: vertical-lr;
-			-moz-writing-mode: vertical-lr;
-			-ms-writing-mode: vertical-lr;
-			writing-mode: vertical-lr;
+	.lt-ie9 & {
+		> li {
+			text-align: left;
+			height: 113px;
 		}
 	}
 }
