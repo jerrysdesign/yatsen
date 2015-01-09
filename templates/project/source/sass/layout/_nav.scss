@@ -83,11 +83,12 @@ $mainNavColor: #f2ebb0;
 	@extend %foot-navbar-space;
 	@extend %center-block;
 	@extend .top-nav;
-	width: 33%;
+	width: 35%;
 	clear: both;
 	float: none;
-	.lt-ie9 {
+	.lt-ie9 & {
 		@extend %text-center;
-		width: 35%;
+		text-align: center;
+		width: 37%;
 	}
 }

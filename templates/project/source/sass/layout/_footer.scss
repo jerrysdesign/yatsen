@@ -3,8 +3,8 @@
    ======================= */
 
 .footer {
-	background: url('#{$imagesPath}/bg-foot.png');
-	height: 134px;
+	background-image: url('#{$imagesPath}/bg-foot.png');
+	min-height: 134px;
 	@include adjust-font-size-to(13px); 
 	padding-top: 40px;
 	.logo0 {
@@ -12,12 +12,12 @@
 		@include span-columns(2, 17);
 		@include push(4.5);
 		@include size(90px 75px);
-		background: url('#{$imagesPath}/logo-0.png');
+		background-image: url('#{$imagesPath}/logo-0.png');
 		@include image-2x('#{$imagesPath}/logo-0@2x.png', 90px, 75px);
 	}
 	&.foot-b {
 		padding-top: 0;
-		background-position: bottom;
+		background-position: center bottom;
 		background-repeat: no-repeat;
 		margin-top: 20px;
 	}
