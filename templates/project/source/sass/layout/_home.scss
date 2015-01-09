@@ -935,8 +935,9 @@ body {
 .lt-ie9 {
 }
 
-.rest-table {
-	th, tr, td {
+.reset-table {
+	tr, th, td {
+		margin: 0;
 		padding: 0;
 		border: none;
 	}
